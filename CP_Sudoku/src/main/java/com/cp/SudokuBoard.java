@@ -11,10 +11,6 @@ public class SudokuBoard {
         board = new int[N][N];
     }
 
-    public int getBoardSize() {
-        return N;
-    }
-
     public int[] getRow(int i) {
         return board[i];
     }

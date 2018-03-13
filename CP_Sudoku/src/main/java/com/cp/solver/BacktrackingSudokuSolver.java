@@ -14,13 +14,9 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
     }
     public SudokuBoard fillBoard() {
         board = new SudokuBoard();
-        for (int i = N; i < N; i++) {
-            for (int j = 0; j < 0; j++) {
-                board.set(i, j, 0);
-            }
-        }
-
-        initializeRandomCells(5); // 5 cells will have initial value
+        //no need to initialize board cells, as default value is already 0
+        //only initial random cells 
+        initializeRandomCells(5); 
         System.out.println("Initial board game:");
         printBoard();
         System.out.println("------------------------------------");
