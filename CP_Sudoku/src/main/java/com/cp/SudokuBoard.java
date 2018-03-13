@@ -1,10 +1,72 @@
 package com.cp;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class SudokuBoard {
     static final int N = 9;
     private static int[][] board;
+    private boolean resolved = false;
+    
+    public SudokuBoard() {
+    	board = new int[N][N];
+	}
+
+	public boolean isResolved() {
+		return checkBoard();
+	}
+
+	public void setResolved(boolean resolved) {
+		this.resolved = resolved;
+	}
+
+	public int get(int x, int y) {
+    	int val = board[x][y];
+    	return val;
+    }
+    
+    public void set(int x, int y, int value) {
+    	//value 0 will be inserted by the algorithm solver when backtracking, to reset de position
+    	if (value >= 0 && value <= 9) { 
+    		board[x][y] = value;
+    	}
+    }
+
+    private boolean checkBoard() {
+    	boolean ret = true;
+    	for (int i=0; i<N; i++) {
+            //ith row
+            ret &= checkArrayIsValid(board[i]);
+            //ith column
+            int[] colArray = new int[N];
+            for (int j=0;j<N;j++)
+                colArray[j] = board[j][i];
+            ret &= checkArrayIsValid(colArray);
+        }
+        //check each 3x3 box
+        for (int i=0; i<N; i+=3) {
+            for (int j=0; j<N; j+=3) {
+                int xl = i, xr = i+2, yt = j, yb = j+2;
+                int[] boxArray = new int[N];
+                int k = 0;
+                for(int ii=xl; ii<=xr;ii++) {//put the elements of the box into an array
+                    for (int jj=yt; jj<=yb; jj++)
+                        boxArray[k++] = board[ii][jj];
+                }
+                ret &= checkArrayIsValid(boxArray);
+            }
+        }
+        resolved = ret;
+        return ret;
+    }
+    
+    private boolean checkArrayIsValid(int[] arr) {
+        //check either a row or a column is valid
+        int[] copy = Arrays.copyOf(arr, N);
+        Arrays.sort(copy);
+        int[] validLine = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        return Arrays.equals(validLine, copy);
+    }
 
     public static int[][] fillBoard() {
         board = new int[N][N];
@@ -127,7 +189,7 @@ public class SudokuBoard {
         }
     }
 
-    static class Cell {
+    public static class Cell {
         int row, col;
 
         public Cell(int row, int col) {
@@ -136,7 +198,23 @@ public class SudokuBoard {
             this.col = col;
         }
 
-        @Override
+        public int getRow() {
+			return row;
+		}
+
+		public void setRow(int row) {
+			this.row = row;
+		}
+
+		public int getCol() {
+			return col;
+		}
+
+		public void setCol(int col) {
+			this.col = col;
+		}
+
+		@Override
         public String toString() {
             return "Cell [row=" + row + ", col=" + col + "]";
         }
