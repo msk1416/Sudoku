@@ -9,6 +9,6 @@ import com.cp.solver.BacktrackingSudokuSolver;
 public class App {
     public static void main(final String[] args) {
         BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
-        solver.main(args);
+        solver.fillBoard();
     }
 }

@@ -3,12 +3,13 @@ package com.cp;
 import java.util.Arrays;
 
 import com.cp.SudokuBoard;
+import com.cp.solver.BacktrackingSudokuSolver;
 
 import junit.framework.TestCase;
 
 public class SudokuBoardTest extends TestCase {
 
-    private final int N = SudokuBoard.N;
+    private int N = SudokuBoard.N;
     private final int[] validLine = {1,2,3,4,5,6,7,8,9};
     public SudokuBoardTest(String name) {
         super(name);
@@ -23,15 +24,16 @@ public class SudokuBoardTest extends TestCase {
     }
 
     public void testCorrectness() {
-        int[][] testBoard = SudokuBoard.fillBoard();
+    	BacktrackingSudokuSolver testSolver = new BacktrackingSudokuSolver();
+        SudokuBoard testBoard = testSolver.fillBoard();
         //check rows and columns
         for (int i=0; i<N; i++) {
             //ith row
-            assertTrue(arrayIsValid(testBoard[i]));
+            assertTrue(arrayIsValid(testBoard.getRow(i)));
             //ith column
             int[] colArray = new int[N];
             for (int j=0;j<N;j++)
-                colArray[j] = testBoard[j][i];
+                colArray[j] = testBoard.get(j, i);
             assertTrue(arrayIsValid(colArray));
         }
         //check each 3x3 box
@@ -42,7 +44,7 @@ public class SudokuBoardTest extends TestCase {
                 int k = 0;
                 for(int ii=xl; ii<=xr;ii++) {//put the elements of the box into an array
                     for (int jj=yt; jj<=yb; jj++)
-                        boxArray[k++] = testBoard[ii][jj];
+                        boxArray[k++] = testBoard.get(ii, jj);
                 }
                 assertTrue(arrayIsValid(boxArray));
             }
@@ -57,9 +59,21 @@ public class SudokuBoardTest extends TestCase {
     }
 
     public void testNoRepeatedSolutions() {
-        int[][] boardTest1 = SudokuBoard.fillBoard();
-        int[][] boardTest2 = SudokuBoard.fillBoard();
-        assertFalse(Arrays.equals(boardTest1, boardTest2));
+    	BacktrackingSudokuSolver testSolver = new BacktrackingSudokuSolver();
+        SudokuBoard boardTest1 = testSolver.fillBoard();
+        SudokuBoard boardTest2 = testSolver.fillBoard();
+        assertFalse(equalBoards(boardTest1, boardTest2));
+    }
+    
+    private boolean equalBoards(SudokuBoard a, SudokuBoard b) {
+    	for (int i = 0; i < N; i++) {
+    		for (int j = 0; j < N; j++) {
+    			if (a.get(i, j) != b.get(i, j)) {
+    				return false;
+    			}
+    		}
+    	}
+    	return true;
     }
 
 }
