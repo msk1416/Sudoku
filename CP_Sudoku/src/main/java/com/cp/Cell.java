@@ -1,8 +1,8 @@
 package com.cp;
 
 public class Cell {
-	int row;
-	int col;
+    int row;
+    int col;
 
     public Cell(int row, int col) {
         super();
@@ -11,22 +11,22 @@ public class Cell {
     }
 
     public int getRow() {
-		return row;
-	}
+        return row;
+    }
 
-	public void setRow(int row) {
-		this.row = row;
-	}
+    public void setRow(int row) {
+        this.row = row;
+    }
 
-	public int getCol() {
-		return col;
-	}
+    public int getCol() {
+        return col;
+    }
 
-	public void setCol(int col) {
-		this.col = col;
-	}
+    public void setCol(int col) {
+        this.col = col;
+    }
 
-	@Override
+    @Override
     public String toString() {
         return "Cell [row=" + row + ", col=" + col + "]";
     }

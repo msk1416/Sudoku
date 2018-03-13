@@ -8,5 +8,5 @@ import com.cp.SudokuBoard;
  */
 public interface SudokuSolver {
 
-	public void solve(SudokuBoard board);
+    public void solve(SudokuBoard board);
 }

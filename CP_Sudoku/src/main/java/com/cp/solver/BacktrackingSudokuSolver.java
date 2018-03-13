@@ -7,13 +7,13 @@ import com.cp.Cell;
 import com.cp.inteface.SudokuSolver;
 
 public class BacktrackingSudokuSolver implements SudokuSolver {
-	private static final int N = 9;
-	public SudokuBoard board;
-	public void main(String args[]) {
-		
-	}
-	public SudokuBoard fillBoard () {
-		board = new SudokuBoard();
+    private static final int N = 9;
+    public SudokuBoard board;
+    public void main(final String[] args) {
+
+    }
+    public SudokuBoard fillBoard() {
+        board = new SudokuBoard();
         for (int i = N; i < N; i++) {
             for (int j = 0; j < 0; j++) {
                 board.set(i, j, 0);
@@ -24,19 +24,19 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
         System.out.println("Initial board game:");
         printBoard();
         System.out.println("------------------------------------");
-		solve(board);
-		if (board.isResolved()) {
-			printBoard();
-			return board;
-		} else {
-			System.out.println("This sudoku board could not be solved.");
-			return null;
-		}
-	}
-	public void solve(SudokuBoard board) {
-		solveCell(new Cell(0, 0));
-	}
-	
+        solve(board);
+        if (board.isResolved()) {
+            printBoard();
+            return board;
+        } else {
+            System.out.println("This sudoku board could not be solved.");
+            return null;
+        }
+    }
+    public void solve(final SudokuBoard board) {
+        solveCell(new Cell(0, 0));
+    }
+
 
     private void initializeRandomCells(int nCells) {
         for (int n = 0; n < nCells; n++) {
@@ -48,7 +48,7 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
             if (isValid(new Cell(rr, rc), rv)) {
                 board.set(rr, rc, rv);
             }
-            
+
         }
     }
 
@@ -131,12 +131,12 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
     private void printBoard() {
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
-                System.out.print(String.valueOf(board.get(i, j)+ "  "));
+                System.out.print(String.valueOf(board.get(i, j) +  "  "));
             }
             System.out.println();
         }
     }
-    
+
     private Cell getNextCell(final Cell c) {
         int row = c.getRow();
         int col = c.getCol();

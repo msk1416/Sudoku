@@ -9,7 +9,7 @@ import junit.framework.TestCase;
 
 public class SudokuBoardTest extends TestCase {
 
-    private int N = SudokuBoard.N;
+    private final int N = SudokuBoard.N;
     private final int[] validLine = {1,2,3,4,5,6,7,8,9};
     public SudokuBoardTest(String name) {
         super(name);
@@ -24,7 +24,7 @@ public class SudokuBoardTest extends TestCase {
     }
 
     public void testCorrectness() {
-    	BacktrackingSudokuSolver testSolver = new BacktrackingSudokuSolver();
+        BacktrackingSudokuSolver testSolver = new BacktrackingSudokuSolver();
         SudokuBoard testBoard = testSolver.fillBoard();
         //check rows and columns
         for (int i=0; i<N; i++) {
@@ -59,21 +59,21 @@ public class SudokuBoardTest extends TestCase {
     }
 
     public void testNoRepeatedSolutions() {
-    	BacktrackingSudokuSolver testSolver = new BacktrackingSudokuSolver();
+        BacktrackingSudokuSolver testSolver = new BacktrackingSudokuSolver();
         SudokuBoard boardTest1 = testSolver.fillBoard();
         SudokuBoard boardTest2 = testSolver.fillBoard();
         assertFalse(equalBoards(boardTest1, boardTest2));
     }
-    
+
     private boolean equalBoards(SudokuBoard a, SudokuBoard b) {
-    	for (int i = 0; i < N; i++) {
-    		for (int j = 0; j < N; j++) {
-    			if (a.get(i, j) != b.get(i, j)) {
-    				return false;
-    			}
-    		}
-    	}
-    	return true;
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                if (a.get(i, j) != b.get(i, j)) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
 }
