@@ -2,8 +2,8 @@ package com.cp.solver;
 
 import java.util.Random;
 
-import com.cp.SudokuBoard;
 import com.cp.Cell;
+import com.cp.elems.SudokuBoard;
 import com.cp.inteface.SudokuSolver;
 
 public class BacktrackingSudokuSolver implements SudokuSolver {

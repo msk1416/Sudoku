@@ -1,6 +1,6 @@
 package com.cp.inteface;
 
-import com.cp.SudokuBoard;
+import com.cp.elems.SudokuBoard;
 /**
  * 
  * @author sergi

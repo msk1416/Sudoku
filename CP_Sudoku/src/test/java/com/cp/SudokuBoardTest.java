@@ -2,7 +2,7 @@ package com.cp;
 
 import java.util.Arrays;
 
-import com.cp.SudokuBoard;
+import com.cp.elems.SudokuBoard;
 import com.cp.solver.BacktrackingSudokuSolver;
 
 import junit.framework.TestCase;
