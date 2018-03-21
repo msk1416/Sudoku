@@ -2,6 +2,14 @@ package com.cp.elems;
 
 public class SudokuField {
     private int value;
+    
+    public SudokuField() {
+        this.value = 0;
+    }
+    
+    public SudokuField(int value) {
+        this.value = value;
+    }
 
     public int getFieldValue() {
         return value;

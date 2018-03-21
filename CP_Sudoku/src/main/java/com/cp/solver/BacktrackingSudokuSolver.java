@@ -12,6 +12,9 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
     public void main(final String[] args) {
 
     }
+    public BacktrackingSudokuSolver() {
+        
+    }
     public SudokuBoard fillBoard() {
         board = new SudokuBoard();
         //no need to initialize board cells, as default value is already 0

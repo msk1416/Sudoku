@@ -4,15 +4,52 @@ import java.util.Arrays;
 
 public class SudokuBoard {
     static final int N = 9;
-    private int[][] board;
+    private SudokuField[][] board;
     private boolean resolved = false;
 
     public SudokuBoard() {
-        board = new int[N][N];
+        board = new SudokuField[N][N];
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                board[i][j] = new SudokuField();
+            }
+        }
     }
+    public int getSize() {
+        return N;
+    }
+    public SudokuRow getRow(int i) {
+        SudokuRow row = new SudokuRow();
+        row.setLine(board[i]);
+        return row;
+    }
+    
+    public SudokuColumn getColumn(int i) {
+        SudokuField[] colArray = new SudokuField[N];
+        for (int j = 0; j < N; j++) {
+            colArray[j] = board[j][i];
+        }
+        SudokuColumn col = new SudokuColumn();
+        col.setLine(colArray);
+        return col;
+    }
+    
+    public SudokuBox getBox(int i, int j) {
+        int xl = (i / 3) * 3,
+            xr = i + 2, 
+            yt = (j / 3) * 3, 
+            yb = j + 2;
+        int[] boxArray = new int[N];
+        int k = 0;
+        for (int ii = xl; ii <= xr; ii++) { //put the elements of the box into an array
+            for (int jj = yt; jj <= yb; jj++) {
+                boxArray[k++] = board[ii][jj].getFieldValue();
+            }
+        }
 
-    public int[] getRow(int i) {
-        return board[i];
+        SudokuBox box = new SudokuBox(boxArray);
+        return box;
+        
     }
 
     public boolean isResolved() {
@@ -26,14 +63,14 @@ public class SudokuBoard {
     }
 
     public int get(int x, int y) {
-        int val = board[x][y];
+        int val = board[x][y].getFieldValue();
         return val;
     }
 
     public void set(int x, int y, int value) {
         //value 0 will be inserted by the algorithm solver when backtracking, to reset de position
         if (value >= 0 && value <= 9) { 
-            board[x][y] = value;
+            board[x][y].setFieldValue(value);
         }
     }
 
@@ -41,26 +78,23 @@ public class SudokuBoard {
         boolean ret = true;
         for (int i = 0; i < N; i++) {
             //ith row
-            ret &= checkArrayIsValid(board[i]);
+            ret &= getRow(i).verify();
             //ith column
-            int[] colArray = new int[N];
-            for (int j = 0; j < N; j++) {
-                colArray[j] = board[j][i];
-            }
-            ret &= checkArrayIsValid(colArray);
+            ret &= getColumn(i).verify();
         }
         //check each 3x3 box
         for (int i = 0; i < N; i += 3) {
             for (int j = 0; j < N; j += 3) {
-                int xl = i, xr = i + 2, yt = j, yb = j + 2;
+                /*int xl = i, xr = i + 2, yt = j, yb = j + 2;
                 int[] boxArray = new int[N];
                 int k = 0;
                 for (int ii = xl; ii <= xr; ii++) { //put the elements of the box into an array
                     for (int jj = yt; jj <= yb; jj++) {
                         boxArray[k++] = board[ii][jj];
                     }
-                }
-                ret &= checkArrayIsValid(boxArray);
+                }*/
+                ret &= getBox(i, j).verify();
+                //ret &= checkArrayIsValid(boxArray);
             }
         }
         resolved = ret;
