@@ -1,7 +1,5 @@
 package com.cp.elems;
 
-import java.util.Arrays;
-
 public class SudokuBoard {
     static final int N = 9;
     private SudokuField[][] board;
@@ -15,9 +13,7 @@ public class SudokuBoard {
             }
         }
     }
-    public int getSize() {
-        return N;
-    }
+
     public SudokuRow getRow(int i) {
         SudokuRow row = new SudokuRow();
         row.setLine(board[i]);
@@ -85,27 +81,10 @@ public class SudokuBoard {
         //check each 3x3 box
         for (int i = 0; i < N; i += 3) {
             for (int j = 0; j < N; j += 3) {
-                /*int xl = i, xr = i + 2, yt = j, yb = j + 2;
-                int[] boxArray = new int[N];
-                int k = 0;
-                for (int ii = xl; ii <= xr; ii++) { //put the elements of the box into an array
-                    for (int jj = yt; jj <= yb; jj++) {
-                        boxArray[k++] = board[ii][jj];
-                    }
-                }*/
                 ret &= getBox(i, j).verify();
-                //ret &= checkArrayIsValid(boxArray);
             }
         }
         resolved = ret;
         return ret;
-    }
-
-    private boolean checkArrayIsValid(final int[] arr) {
-        //check either a row or a column is valid
-        int[] copy = Arrays.copyOf(arr, N);
-        Arrays.sort(copy);
-        int[] validLine = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        return Arrays.equals(validLine, copy);
     }
 }
