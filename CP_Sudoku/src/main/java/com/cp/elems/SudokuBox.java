@@ -21,7 +21,7 @@ public class SudokuBox {
      * Initialize box from array of values
      * @param line array with values to be set, ordered line
      */
-    public SudokuBox(final int[] line) {
+    public SudokuBox(final List<SudokuField> line) {
         box = Arrays.asList(Arrays.asList(new SudokuField[N]));
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {

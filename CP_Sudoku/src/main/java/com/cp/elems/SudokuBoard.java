@@ -26,10 +26,10 @@ public class SudokuBoard {
     public SudokuColumn getColumn(int i) {
         SudokuField[] colArray = new SudokuField[N];
         for (int j = 0; j < N; j++) {
-            colArray[j] = board[j][i];
+            colArray[j] = board.get(j).get(i);
         }
         SudokuColumn col = new SudokuColumn();
-        col.setLine(colArray);
+        col.setLine(Arrays.asList(colArray));
         return col;
     }
     
@@ -42,7 +42,7 @@ public class SudokuBoard {
         int k = 0;
         for (int ii = xl; ii <= xr; ii++) { //put the elements of the box into an array
             for (int jj = yt; jj <= yb; jj++) {
-                boxArray[k++] = board[ii][jj].getFieldValue();
+                boxArray[k++] = board.get(ii).get(jj).getFieldValue();
             }
         }
 
