@@ -2,9 +2,7 @@ package com.cp.elems;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import org.apache.commons.collections4.list.FixedSizeList;
-import com.cp.elems.SudokuFieldList;
+
 public class SudokuBoard {
     static final int N = 9;
     private ArrayList<ArrayList<SudokuField>> board;
@@ -12,7 +10,6 @@ public class SudokuBoard {
 
     public SudokuBoard() {
         board = new ArrayList<ArrayList<SudokuField>>(N);
-        //board = (ArrayList<ArrayList<SudokuField>>)Arrays.asList(new ArrayList<SudokuField>[N]);
         for (int i = 0; i < N; i++) {
             board.add(i, new ArrayList<SudokuField>(N));
             for (int j = 0; j < N; j++) {
@@ -60,10 +57,6 @@ public class SudokuBoard {
         //same as return checkBoard() but we avoid a never-used warning
         checkBoard();
         return resolved;
-    }
-
-    public void setResolved(boolean resolved) {
-        this.resolved = resolved;
     }
 
     public int get(int x, int y) {
