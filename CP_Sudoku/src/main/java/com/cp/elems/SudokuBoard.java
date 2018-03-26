@@ -1,18 +1,22 @@
 package com.cp.elems;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+import org.apache.commons.collections4.list.FixedSizeList;
+import com.cp.elems.SudokuFieldList;
 public class SudokuBoard {
     static final int N = 9;
-    private List<List<SudokuField>> board;
+    private ArrayList<ArrayList<SudokuField>> board;
     private boolean resolved = false;
 
     public SudokuBoard() {
-        board = Arrays.asList(Arrays.asList(new SudokuField[N]));
+        board = new ArrayList<ArrayList<SudokuField>>(N);
+        //board = (ArrayList<ArrayList<SudokuField>>)Arrays.asList(new ArrayList<SudokuField>[N]);
         for (int i = 0; i < N; i++) {
+            board.add(i, new ArrayList<SudokuField>(N));
             for (int j = 0; j < N; j++) {
-                board.get(i).set(j, new SudokuField());
+                board.get(i).add(j, new SudokuField());
             }
         }
     }
@@ -38,15 +42,16 @@ public class SudokuBoard {
             xr = i + 2, 
             yt = (j / 3) * 3, 
             yb = j + 2;
-        int[] boxArray = new int[N];
+        SudokuField[] boxArray = new SudokuField[N];
         int k = 0;
         for (int ii = xl; ii <= xr; ii++) { //put the elements of the box into an array
             for (int jj = yt; jj <= yb; jj++) {
-                boxArray[k++] = board.get(ii).get(jj).getFieldValue();
+                boxArray[k++] = board.get(ii).get(jj);
             }
         }
 
-        SudokuBox box = new SudokuBox(boxArray);
+        SudokuBox box = new SudokuBox();
+        box.setLine(Arrays.asList(boxArray));
         return box;
         
     }
@@ -62,14 +67,14 @@ public class SudokuBoard {
     }
 
     public int get(int x, int y) {
-        int val = board[x][y].getFieldValue();
+        int val = board.get(x).get(y).getFieldValue();
         return val;
     }
 
     public void set(int x, int y, int value) {
         //value 0 will be inserted by the algorithm solver when backtracking, to reset de position
         if (value >= 0 && value <= 9) { 
-            board[x][y].setFieldValue(value);
+            board.get(x).get(y).setFieldValue(value);
         }
     }
 
