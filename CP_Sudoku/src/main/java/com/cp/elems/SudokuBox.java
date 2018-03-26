@@ -40,4 +40,8 @@ public class SudokuBox {
         int[] validLine = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         return Arrays.equals(validLine, boxArray);
     }
+    
+    public SudokuField get(int i, int j) {
+        return box[i][j];
+    }
 }
