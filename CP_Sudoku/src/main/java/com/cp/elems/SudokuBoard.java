@@ -1,22 +1,25 @@
 package com.cp.elems;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class SudokuBoard {
     static final int N = 9;
-    private SudokuField[][] board;
+    private List<List<SudokuField>> board;
     private boolean resolved = false;
 
     public SudokuBoard() {
-        board = new SudokuField[N][N];
+        board = Arrays.asList(Arrays.asList(new SudokuField[N]));
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
-                board[i][j] = new SudokuField();
+                board.get(i).set(j, new SudokuField());
             }
         }
     }
 
     public SudokuRow getRow(int i) {
         SudokuRow row = new SudokuRow();
-        row.setLine(board[i]);
+        row.setLine(board.get(i));
         return row;
     }
     
