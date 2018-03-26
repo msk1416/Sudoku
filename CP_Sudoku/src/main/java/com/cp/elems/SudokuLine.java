@@ -1,6 +1,7 @@
 package com.cp.elems;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * 
@@ -8,33 +9,33 @@ import java.util.Arrays;
  *
  */
 public abstract class SudokuLine {
-    private SudokuField[] line;
+    private List<SudokuField> line;
     private final int N = 9;
     
     public SudokuLine() {
-        line = new SudokuField[N];
+        line = Arrays.asList(new SudokuField[N]);
         for (int i = 0; i < N; i++) {
-            line[i] = new SudokuField();
+            line.set(i, new SudokuField());
         }
     }
     /**
      * @return the line
      */
-    public SudokuField[] getLine() {
+    public List<SudokuField> getLine() {
         return line;
     }
     
     /**
      * @param line the line to set
      */
-    public void setLine(final SudokuField[] line) {
+    public void setLine(final List<SudokuField> line) {
         this.line = line;
     }
     
     private int[] toArray() {
         int[] arr = new int[N];
         for (int i = 0; i < N; i++) {
-            arr[i] = line[i].getFieldValue();
+            arr[i] = line.get(i).getFieldValue();
         }
         return arr;
     }
