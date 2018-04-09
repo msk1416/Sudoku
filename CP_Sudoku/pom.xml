@@ -79,6 +79,7 @@
             <artifactId>junit-jupiter-engine</artifactId>
             <version>5.1.0</version>
         </dependency>
+<<<<<<< HEAD
         <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
 		<dependency>
 		    <groupId>com.google.guava</groupId>
@@ -86,6 +87,8 @@
 		    <version>24.0-jre</version>
 		</dependency>
         
+=======
+>>>>>>> branch 'exercise-6' of https://902382@atlas.it.p.lodz.pl/bitbucket/scm/comprog2018/comprog18.git
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
