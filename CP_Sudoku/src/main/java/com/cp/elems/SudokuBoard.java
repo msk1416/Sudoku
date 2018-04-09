@@ -3,6 +3,9 @@ package com.cp.elems;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import com.google.common.base.MoreObjects;
+import com.google.common.base.Objects;
+
 public class SudokuBoard {
     static final int N = 9;
     private ArrayList<ArrayList<SudokuField>> board;
@@ -87,5 +90,22 @@ public class SudokuBoard {
         }
         resolved = ret;
         return ret;
+    }
+    
+    @Override
+    public String toString() {
+        return MoreObjects.toStringHelper(this.getClass())
+                .add("board", board)
+                .add("resolved", resolved)
+                .add("N", N)
+                .toString();
+    }
+    
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(
+                this.board,
+                this.resolved,
+                this.N);
     }
 }

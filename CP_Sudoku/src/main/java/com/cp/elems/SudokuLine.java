@@ -3,6 +3,9 @@ package com.cp.elems;
 import java.util.Arrays;
 import java.util.List;
 
+import com.google.common.base.MoreObjects;
+import com.google.common.base.Objects;
+
 /**
  * 
  * @author sergi
@@ -52,5 +55,20 @@ public abstract class SudokuLine {
      */
     public int getSize() {
         return N;
+    }
+    
+    @Override
+    public String toString() {
+        return MoreObjects.toStringHelper(this.getClass())
+                .add("line", line)
+                .add("N", N)
+                .toString();
+    }
+    
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(
+                this.line,
+                this.N);
     }
 }

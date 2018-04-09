@@ -1,5 +1,8 @@
 package com.cp.elems;
 
+import com.google.common.base.MoreObjects;
+import com.google.common.base.Objects;
+
 public class SudokuField {
     private int value;
     
@@ -25,6 +28,18 @@ public class SudokuField {
         } else {
             this.value = 0;
         }
+    }
+    
+    @Override
+    public String toString() {
+        return MoreObjects.toStringHelper(this.getClass())
+            .add("value", value)
+            .toString();
+    }
+    
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(this.value);
     }
     
 }
