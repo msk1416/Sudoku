@@ -43,9 +43,13 @@ public class SudokuField {
     }
     
     @Override
-    public boolean equals(Object obj) {
-        if (obj == null) return false;
-        if (getClass() != obj.getClass()) return false;
+    public boolean equals(final Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) { 
+            return false;
+        }
         final SudokuField other = (SudokuField) obj;
         return Objects.equal(this.value, other.value);
     }

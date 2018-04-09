@@ -22,9 +22,13 @@ public class SudokuRow extends SudokuLine {
     
     
     @Override
-    public boolean equals(Object obj) {
-        if (obj == null) return false;
-        if (getClass() != obj.getClass()) return false;
+    public boolean equals(final Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
         final SudokuRow other = (SudokuRow) obj;
         return Objects.equal(this.getLine(), other.getLine())
                 && Objects.equal(this.getSize(), other.getSize());
