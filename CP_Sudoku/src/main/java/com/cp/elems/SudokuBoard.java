@@ -108,4 +108,14 @@ public class SudokuBoard {
                 this.resolved,
                 this.N);
     }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) return false;
+        if (getClass() != obj.getClass()) return false;
+        final SudokuBoard other = (SudokuBoard) obj;
+        return Objects.equal(this.board, other.board)
+                && Objects.equal(this.resolved, other.resolved)
+                && Objects.equal(this.N, other.N);
+    }
 }
