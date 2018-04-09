@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package com.cp.elems;
 
 import com.google.common.base.MoreObjects;
@@ -21,10 +20,3 @@ public class SudokuBox extends SudokuLine {
                 this.getSize());
     }
 }
-=======
-package com.cp.elems;
-
-public class SudokuBox extends SudokuLine {
-
-}
->>>>>>> branch 'exercise-6' of https://902382@atlas.it.p.lodz.pl/bitbucket/scm/comprog2018/comprog18.git
