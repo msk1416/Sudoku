@@ -71,4 +71,13 @@ public abstract class SudokuLine {
                 this.line,
                 this.N);
     }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) return false;
+        if (getClass() != obj.getClass()) return false;
+        final SudokuLine other = (SudokuLine) obj;
+        return Objects.equal(this.line, other.line)
+                && Objects.equal(this.N, other.N);
+    }
 }

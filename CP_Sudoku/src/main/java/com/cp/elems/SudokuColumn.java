@@ -20,4 +20,12 @@ public class SudokuColumn extends SudokuLine {
                 this.getSize());
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) return false;
+        if (getClass() != obj.getClass()) return false;
+        final SudokuColumn other = (SudokuColumn) obj;
+        return Objects.equal(this.getLine(), other.getLine())
+                && Objects.equal(this.getSize(), other.getSize());
+    }
 }
