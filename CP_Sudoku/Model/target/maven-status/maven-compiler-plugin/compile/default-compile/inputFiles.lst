@@ -1,0 +1,13 @@
+C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\solver\BacktrackingSudokuSolver.java
+C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\Cell.java
+C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\elems\SudokuLine.java
+C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\dao\FileSudokuBoardDao.java
+C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\elems\SudokuRow.java
+C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\dao\SudokuBoardDaoFactory.java
+C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\dao\Dao.java
+C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\App.java
+C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\inteface\SudokuSolver.java
+C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\elems\SudokuField.java
+C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\elems\SudokuColumn.java
+C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\elems\SudokuBoard.java
+C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\elems\SudokuBox.java
