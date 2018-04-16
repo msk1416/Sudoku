@@ -1,29 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="6.18">
-<file name="C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\App.java">
-</file>
-<file name="C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\Cell.java">
-</file>
-<file name="C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\dao\Dao.java">
-</file>
-<file name="C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\dao\FileSudokuBoardDao.java">
-</file>
-<file name="C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\dao\SudokuBoardDaoFactory.java">
-</file>
-<file name="C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\elems\SudokuBoard.java">
-</file>
-<file name="C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\elems\SudokuBox.java">
-</file>
-<file name="C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\elems\SudokuColumn.java">
-</file>
-<file name="C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\elems\SudokuField.java">
-</file>
-<file name="C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\elems\SudokuLine.java">
-</file>
-<file name="C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\elems\SudokuRow.java">
-</file>
-<file name="C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\inteface\SudokuSolver.java">
-</file>
-<file name="C:\Users\sergi\Desktop\Politechnika Lodzka\COMPONENT PROGRAMMING\git\comprog18\CP_Sudoku\Model\src\main\java\com\cp\solver\BacktrackingSudokuSolver.java">
-</file>
 </checkstyle>
