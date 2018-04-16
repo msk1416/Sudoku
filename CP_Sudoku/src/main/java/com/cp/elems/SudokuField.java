@@ -1,9 +1,15 @@
 package com.cp.elems;
 
+import java.io.Serializable;
+
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 
-public class SudokuField {
+public class SudokuField implements Serializable {
+    /**
+     * 
+     */
+    private static final long serialVersionUID = -7945057612502061554L;
     private int value;
     
     public SudokuField() {

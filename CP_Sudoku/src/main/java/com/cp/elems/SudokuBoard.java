@@ -1,12 +1,17 @@
 package com.cp.elems;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 
-public class SudokuBoard {
+public class SudokuBoard implements Serializable {
+    /**
+     * 
+     */
+    private static final long serialVersionUID = -3162808268825390492L;
     static final int N = 9;
     private ArrayList<ArrayList<SudokuField>> board;
     private boolean resolved = false;
@@ -90,6 +95,17 @@ public class SudokuBoard {
         }
         resolved = ret;
         return ret;
+    }
+    
+    public void print() {
+        System.out.println("-------------------------");
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                System.out.print(String.valueOf(board.get(i).get(j).getFieldValue() +  "  "));
+            }
+            System.out.println();
+        }
+        
     }
     
     @Override

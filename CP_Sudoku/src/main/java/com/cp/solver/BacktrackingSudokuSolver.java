@@ -22,7 +22,7 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
         initializeRandomCells(5); 
         System.out.println("Initial board game:");
         printBoard();
-        System.out.println("------------------------------------");
+        System.out.println("-------------------------");
         solve(board);
         if (board.isResolved()) {
             printBoard();
