@@ -10,7 +10,7 @@ public class SudokuBoardDaoFactory {
     private Dao<SudokuBoard> dao;
     public static Dao<SudokuBoard> getFileDao (String fileName) {
         
-        return new FileSudokuBoardDao();
+        return new FileSudokuBoardDao(fileName);
     }
     
     public static SudokuBoardDaoFactory getInstance() {

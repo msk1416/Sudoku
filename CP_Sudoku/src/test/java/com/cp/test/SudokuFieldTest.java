@@ -1,4 +1,4 @@
-package com.cp;
+package com.cp.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 

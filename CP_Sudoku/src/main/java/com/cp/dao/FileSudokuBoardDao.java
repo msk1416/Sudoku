@@ -8,10 +8,13 @@ import java.io.ObjectOutputStream;
 
 import com.cp.elems.SudokuBoard;
 
-public class FileSudokuBoardDao implements Dao<SudokuBoard>, AutoCloseable {
-
+public class FileSudokuBoardDao implements Dao<SudokuBoard> {
+    private String fileName;
+    public FileSudokuBoardDao(String fn) {
+        this.fileName = fn;
+    }
     public SudokuBoard read() {
-        try (FileInputStream fis = new FileInputStream("output.dat"); 
+        try (FileInputStream fis = new FileInputStream(fileName); 
                 ObjectInputStream ois = new ObjectInputStream(fis);) {
             return (SudokuBoard)ois.readObject();
         } catch (IOException | ClassNotFoundException e) {
@@ -21,7 +24,7 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard>, AutoCloseable {
     }
 
     public void write(SudokuBoard obj) {
-        try (FileOutputStream fos = new FileOutputStream("output.dat");
+        try (FileOutputStream fos = new FileOutputStream(fileName);
                 ObjectOutputStream oos = new ObjectOutputStream(fos);) {
             oos.writeObject(obj);
         } catch (IOException e) {
@@ -29,16 +32,5 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard>, AutoCloseable {
         }
     }
 
-    @Override
-    public void close() throws Exception {
-        // TODO Auto-generated method stub
-        
-    }
-    
-    @Override
-    protected void finalize() throws Throwable {
-        // TODO Auto-generated method stub
-        super.finalize();
-    }
 
 }
