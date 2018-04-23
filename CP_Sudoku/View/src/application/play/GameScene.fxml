@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="530.0" prefWidth="581.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="application.play.GameController">
+   <children>
+      <Label fx:id="lblTitle" alignment="CENTER" layoutX="127.0" layoutY="30.0" prefHeight="17.0" prefWidth="327.0" text="-DIFF- mode">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="backBtn" layoutX="14.0" layoutY="491.0" mnemonicParsing="false" onAction="#goBackToMenu" text="Back to menu" />
+   </children>
+</AnchorPane>
