@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="373.0" prefWidth="600.0" style="-fx-background-color: co;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="35.0" layoutY="123.0" prefHeight="17.0" prefWidth="532.0" text="Welcome to a new Sudoku game!" textAlignment="CENTER">
@@ -15,6 +14,6 @@
          </font>
       </Label>
       <ComboBox fx:id="difficultyBox" layoutX="225.0" layoutY="189.0" prefWidth="150.0" promptText="Select a difficulty" />
-      <Button layoutX="267.0" layoutY="241.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Start" />
+      <Button fx:id="startBtn" layoutX="267.0" layoutY="241.0" mnemonicParsing="false" onAction="#loadGame" prefHeight="25.0" prefWidth="67.0" text="Start" />
    </children>
 </AnchorPane>

@@ -1,5 +1,9 @@
 package application.play;
 
+import java.util.ArrayList;
+import java.util.Random;
+
+import com.cp.Cell;
 import com.cp.elems.*;
 import com.cp.solver.BacktrackingSudokuSolver;
 
@@ -9,14 +13,18 @@ public class Game {
     //medium --> 6
     //hard --> 4
     private SudokuBoard solution;
+    private SudokuBoard gameBoard;
     
     public Game(String diff) {
         this.difficulty = diff;
+        gameBoard = new SudokuBoard();
         BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
         solution = solver.fillBoard();
         if (solution.isResolved()) {
-            
+            setInitialBoard();
+            gameBoard.print();
         }
+        
     }
     
     private void setInitialBoard() {
@@ -30,7 +38,21 @@ public class Game {
         } else {
             return;
         }
-        for (int i = 0; i < initialCells; i++)
+        ArrayList randomInitialCells = new ArrayList<>(initialCells);
+        for (int i = 0; i < initialCells; i++) {
+            Random rand = new Random();
+            int rr, rc;
+            rr = rand.nextInt(8);
+            rc = rand.nextInt(8);
+            if (!randomInitialCells.contains(new Cell(rr, rc))) {
+                gameBoard.set(rr, rc, solution.get(rr, rc));
+                randomInitialCells.add(new Cell(rr, rc));
+            } else {
+                i--;
+            }
+            
+        }
+        
     }
     
     

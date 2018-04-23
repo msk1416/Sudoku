@@ -3,6 +3,7 @@ package application;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import application.play.Game;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -27,5 +28,11 @@ public class MainController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         // TODO Auto-generated method stub
         difficultyBox.setItems(diffs);
+    }
+    
+    @FXML
+    void loadGame() {
+        difficultyBox.getValue();
+        Game game = new Game(String.valueOf(difficultyBox.getValue()));
     }
 }
