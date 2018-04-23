@@ -84,4 +84,6 @@ public abstract class SudokuLine {
         return Objects.equal(this.line, other.line)
                 && Objects.equal(this.N, other.N);
     }
+    
+    
 }

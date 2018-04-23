@@ -1,9 +1,12 @@
 package com.cp.elems;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 
-public class SudokuRow extends SudokuLine {
+public class SudokuRow extends SudokuLine implements Cloneable {
     
     @Override
     public String toString() {
@@ -32,5 +35,16 @@ public class SudokuRow extends SudokuLine {
         final SudokuRow other = (SudokuRow) obj;
         return Objects.equal(this.getLine(), other.getLine())
                 && Objects.equal(this.getSize(), other.getSize());
+    }
+    
+    @Override
+    protected SudokuRow clone() throws CloneNotSupportedException {
+        SudokuRow clone = new SudokuRow();
+        List<SudokuField> listClone = new ArrayList<SudokuField>();
+        for (int i = 0; i < this.getLine().size(); i++) {
+            listClone.set(i, this.getLine().get(i).clone());
+        }
+        clone.setLine(listClone);
+        return clone;
     }
 }
