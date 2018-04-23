@@ -1,5 +1,10 @@
 package com.cp.elems;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 import com.google.common.base.MoreObjects;
@@ -62,9 +67,26 @@ public class SudokuField implements Serializable, Cloneable, Comparable<SudokuFi
     
     @Override
     protected SudokuField clone() throws CloneNotSupportedException {
-        SudokuField clone = new SudokuField();
-        clone.value = this.value;
-        return clone;
+        byte[] object;
+        try (ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                ObjectOutputStream oos = new ObjectOutputStream(baos);) {
+            oos.writeObject(this);
+            object = baos.toByteArray();
+            
+        } catch (IOException ioe) {
+            System.out.println(ioe);
+            return null;
+        }
+        
+        try (ByteArrayInputStream bais = new ByteArrayInputStream(object);
+                ObjectInputStream ois = new ObjectInputStream(bais);) {
+            
+            SudokuField clone = (SudokuField) ois.readObject();
+            return (SudokuField) clone;
+        } catch (IOException | ClassNotFoundException cnfe) {
+            cnfe.printStackTrace();
+            return null;
+        }
     }
 
     @Override

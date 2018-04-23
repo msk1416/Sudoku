@@ -1,5 +1,10 @@
 package com.cp.elems;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -141,13 +146,25 @@ public class SudokuBoard implements Serializable, Cloneable {
     
     @Override
     protected SudokuBoard clone() throws CloneNotSupportedException {
-        SudokuBoard clone = new SudokuBoard();
-        for (int i = 0; i < clone.board.size(); i++) {
-            for (int j = 0; j < clone.board.get(0).size(); j++) {
-                clone.board.get(i).set(j, board.get(i).get(j).clone());
-            }
+        byte[] object;
+        try (ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                ObjectOutputStream oos = new ObjectOutputStream(baos);) {
+            oos.writeObject(this);
+            object = baos.toByteArray();
+            
+        } catch (IOException ioe) {
+            System.out.println(ioe);
+            return null;
         }
-        clone.resolved = resolved;
-        return clone;
+        
+        try (ByteArrayInputStream bais = new ByteArrayInputStream(object);
+                ObjectInputStream ois = new ObjectInputStream(bais);) {
+            
+            SudokuBoard clone = (SudokuBoard) ois.readObject();
+            return (SudokuBoard) clone;
+        } catch (IOException | ClassNotFoundException cnfe) {
+            cnfe.printStackTrace();
+            return null;
+        }
     }
 }

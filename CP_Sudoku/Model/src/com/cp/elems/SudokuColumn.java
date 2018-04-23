@@ -1,5 +1,10 @@
 package com.cp.elems;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,12 +43,25 @@ public class SudokuColumn extends SudokuLine implements Cloneable {
     
     @Override
     protected SudokuColumn clone() throws CloneNotSupportedException {
-        SudokuColumn clone = new SudokuColumn();
-        List<SudokuField> listClone = new ArrayList<SudokuField>();
-        for (int i = 0; i < this.getLine().size(); i++) {
-            listClone.set(i, this.getLine().get(i).clone());
+        byte[] object;
+        try (ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                ObjectOutputStream oos = new ObjectOutputStream(baos);) {
+            oos.writeObject(this);
+            object = baos.toByteArray();
+            
+        } catch (IOException ioe) {
+            System.out.println(ioe);
+            return null;
         }
-        clone.setLine(listClone);
-        return clone;
+        
+        try (ByteArrayInputStream bais = new ByteArrayInputStream(object);
+                ObjectInputStream ois = new ObjectInputStream(bais);) {
+            
+            SudokuColumn clone = (SudokuColumn) ois.readObject();
+            return (SudokuColumn) clone;
+        } catch (IOException | ClassNotFoundException cnfe) {
+            cnfe.printStackTrace();
+            return null;
+        }
     }
 }
