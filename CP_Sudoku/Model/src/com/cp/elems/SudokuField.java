@@ -59,4 +59,11 @@ public class SudokuField implements Serializable {
         final SudokuField other = (SudokuField) obj;
         return Objects.equal(this.value, other.value);
     }
+    
+    @Override
+    protected SudokuField clone() throws CloneNotSupportedException {
+        SudokuField clone = new SudokuField();
+        clone.value = this.value;
+        return clone;
+    }
 }

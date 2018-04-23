@@ -7,7 +7,7 @@ import java.util.Arrays;
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 
-public class SudokuBoard implements Serializable {
+public class SudokuBoard implements Serializable, Cloneable {
     /**
      * 
      */
@@ -137,5 +137,17 @@ public class SudokuBoard implements Serializable {
         return Objects.equal(this.board, other.board)
                 && Objects.equal(this.resolved, other.resolved)
                 && Objects.equal(this.N, other.N);
+    }
+    
+    @Override
+    protected SudokuBoard clone() throws CloneNotSupportedException {
+        SudokuBoard clone = new SudokuBoard();
+        for (int i = 0; i < clone.board.size(); i++) {
+            for (int j = 0; j < clone.board.get(0).size(); j++) {
+                clone.board.get(i).set(j, board.get(i).get(j).clone());
+            }
+        }
+        clone.resolved = resolved;
+        return clone;
     }
 }
