@@ -27,6 +27,26 @@ public class Game {
         
     }
     
+    public boolean isBoardCorrectlyFilled() {
+        return gameBoard.boardEqual(solution);
+    }
+    
+    public boolean isBoardEntered() {
+        return !gameBoard.existEmptyCells();
+    }
+    
+    public int get(int i, int j) {
+        return gameBoard.get(i, j);
+    }
+    
+    public boolean setValue(int i, int j, int value) {
+        if (value > 0 && value <= 9) {
+            gameBoard.set(i, j, value);
+            return true;
+        }
+        return false;
+    }
+    
     private void setInitialBoard() {
         int initialCells = 0;
         if (difficulty.equals("Easy")) {

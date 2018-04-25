@@ -83,6 +83,17 @@ public class SudokuBoard implements Serializable, Cloneable {
             board.get(x).get(y).setFieldValue(value);
         }
     }
+    
+    public boolean existEmptyCells() {
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                if (board.get(i).get(j).getFieldValue() == 0) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 
     private boolean checkBoard() {
         boolean ret = true;
@@ -139,7 +150,7 @@ public class SudokuBoard implements Serializable, Cloneable {
             return false;
         }
         final SudokuBoard other = (SudokuBoard) obj;
-        return Objects.equal(this.board, other.board)
+        return this.boardEqual(other)
                 && Objects.equal(this.resolved, other.resolved)
                 && Objects.equal(this.N, other.N);
     }
@@ -166,5 +177,16 @@ public class SudokuBoard implements Serializable, Cloneable {
             cnfe.printStackTrace();
             return null;
         }
+    }
+    
+    public boolean boardEqual(SudokuBoard second) {
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                if (!this.board.get(i).get(j).equals(second.board.get(i).get(j))) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }
