@@ -2,6 +2,7 @@ package application;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 import application.play.Game;
@@ -26,6 +27,8 @@ public class MainController implements Initializable {
     Button startBtn;
     @FXML
     Label lblSelectDiff;
+    @FXML
+    ComboBox langBox;
     
     ObservableList<String> diffs = FXCollections.observableArrayList(
             "Easy",
@@ -34,9 +37,14 @@ public class MainController implements Initializable {
         );
 
 
+    
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         difficultyBox.setItems(diffs);
+        langBox.setItems(Main.LANGS);
+        langBox.setPromptText(langBox.getItems().get(0).toString());
+        ResourceBundle labels = ResourceBundle.getBundle("SudokuBundle", Locale.ENGLISH);
+        
     }
     
     @FXML
