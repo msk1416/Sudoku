@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import com.cp.Cell;
-import com.cp.elems.*;
+import com.cp.elems.SudokuBoard;
 import com.cp.solver.BacktrackingSudokuSolver;
 
 public class Game {
