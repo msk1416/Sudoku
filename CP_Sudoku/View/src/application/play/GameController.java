@@ -1,15 +1,18 @@
 package application.play;
 
 import java.awt.Font;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Locale;
 import java.util.Random;
 import java.util.ResourceBundle;
 
+import com.cp.dao.SudokuBoardDaoFactory;
 import com.cp.elems.SudokuBoard;
 
 import application.Main;
+import application.MainController;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.Event;
@@ -25,6 +28,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.scene.input.KeyEvent;
 public class GameController {
@@ -39,20 +43,30 @@ public class GameController {
     Label lblError;
     @FXML
     ComboBox langBox;
-    private String errorEmptyCells = "There are empty cells in the board.";
-    private String errorRuleViolations = "The numbers entered cause rule violations.";
-    private String msgGameCompleted = "Congratulations. You completed this sudoku.";
+    @FXML
+    Button checkBtn;
+    @FXML
+    Button saveBtn;
+    @FXML
+    Button fillBtn;
     private Game currentGame;
     private String difficulty;
+    private boolean loaded = false;
+
+    final FileChooser fileChooser = new FileChooser();
     
     public void init(Game game, String difficulty) {
         langBox.setItems(Main.LANGS);
-        langBox.setPromptText(langBox.getItems().get(0).toString());
-        ResourceBundle labels = ResourceBundle.getBundle("SudokuBundle", Locale.ENGLISH);
-        lblTitle.setText(lblTitle.getText().replaceFirst("-DIFF-", difficulty));
-        this.difficulty = difficulty;
+        setBoxLanguage();
+        Main.labels = ResourceBundle.getBundle("SudokuBundle", Main.currentLocale);
+        lblTitle.setText(Main.labels.getString("game.difficulty.title").replaceFirst("-DIFF-", difficulty));
+        if (game.getDifficulty() != ";;;")
+            this.difficulty = difficulty;
+        else this.difficulty = game.getDifficulty();
         this.currentGame = game;
+        changeLang();
         initBoard();
+        loaded = true;
     }
     
     @SuppressWarnings("unchecked")
@@ -97,10 +111,6 @@ public class GameController {
                     
                 });
 
-                // Iterate the Index using the loops
-                /*boardGrid.setRowIndex(tf,y);
-                boardGrid.setColumnIndex(tf,x);    
-                boardGrid.getChildren().add(tf);*/
                 boardGrid.add(tf, y, x);
             }
         }
@@ -125,16 +135,80 @@ public class GameController {
     
     public void checkGameFinished() {
         if (!currentGame.isBoardEntered()) {
-            lblError.setText(errorEmptyCells);
+            lblError.setText(Main.labels.getString("game.err.empty.cells"));
             lblError.setVisible(true);
         } else if (!currentGame.isBoardCorrectlyFilled()) {
-            lblError.setText(errorRuleViolations);
+            lblError.setText(Main.labels.getString("game.err.rule.violations"));
             lblError.setVisible(true);
         } else {
-            lblError.setText(msgGameCompleted);
+            lblError.setText(Main.labels.getString("game.success.msg"));
             lblError.setStyle("-fx-text-fill: green");
             lblError.setVisible(true);
+            currentGame.getGameBoard().setResolved(true);
         }
     }
     
+    @FXML
+    void changeLang() {
+        //TODO: reset stage
+        if (loaded) Main.currentLocale = getCurrentLocale();
+        Main.labels = ResourceBundle.getBundle("SudokuBundle", Main.currentLocale);
+        difficulty = translateDifficulty(difficulty);
+        lblTitle.setText(Main.labels.getString("game.difficulty.title").replaceFirst("-DIFF-", difficulty));
+        backBtn.setText(Main.labels.getString("game.back.menu"));
+        checkBtn.setText(Main.labels.getString("game.check"));
+        saveBtn.setText(Main.labels.getString("game.save"));
+    }
+    
+    private String translateDifficulty(String diff) {
+        int index = Main.diffs.indexOf(diff);
+        if (index >= 0) {
+            MainController.setDifficulties();
+            return Main.diffs.get(index);
+        } else 
+            return Main.labels.getString("difficulty.custom");
+    }
+    
+    private Locale getCurrentLocale() {
+        if (langBox.getValue() != null) {
+            if (langBox.getValue().toString().contains("English"))
+                return Locale.ENGLISH;
+            else return new Locale (langBox.getValue().toString());
+        } else return Locale.ENGLISH;
+    }
+    
+    private void setBoxLanguage() {
+        if (Main.currentLocale == null) {
+            langBox.setPromptText(Main.LANGS.get(0));
+        } else {
+            String locale = Main.currentLocale.getLanguage();
+            for (int i = 0; i < Main.LANGS.size(); i++) {
+                if (Main.LANGS.get(i).toLowerCase().contains(locale)) {
+                    langBox.setPromptText(Main.LANGS.get(i));
+                    return;
+                }
+            }
+            langBox.setPromptText(Main.LANGS.get(0));
+        }
+    }
+    
+    @FXML
+    void saveGame() {
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Sudoku Board (*.cpsb)", "*.cpsb");
+        fileChooser.getExtensionFilters().add(extFilter);
+        
+        File file = fileChooser.showSaveDialog(boardGrid.getScene().getWindow());
+        
+        
+        if (file != null) {
+            SudokuBoardDaoFactory.getFileDao(file.getAbsolutePath()).write(currentGame.getGameBoard());
+        }
+    }
+    
+    @FXML
+    void fillSudokuResult() {
+        currentGame.loadSolution();
+        checkGameFinished();
+        initBoard();
+    }
 }

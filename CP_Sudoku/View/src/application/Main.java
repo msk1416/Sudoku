@@ -1,5 +1,8 @@
 package application;
 	
+import java.util.Locale;
+import java.util.ResourceBundle;
+
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -18,7 +21,9 @@ public class Main extends Application {
             "English",
             "Català"
         );
-    
+    public static Locale currentLocale;
+    public static ResourceBundle labels;
+    public static ObservableList<String> diffs = FXCollections.observableArrayList();
 	@Override
 	public void start(Stage primaryStage) {
 		try {

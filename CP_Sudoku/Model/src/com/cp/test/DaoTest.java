@@ -14,9 +14,9 @@ class DaoTest {
     void testReadWrite() {
         BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
         SudokuBoard result = solver.fillBoard();
-        SudokuBoardDaoFactory.getFileDao("output.dat").write(result);
+        SudokuBoardDaoFactory.getFileDao("output.cpsb").write(result);
         
-        SudokuBoard testRead = SudokuBoardDaoFactory.getFileDao("output.dat").read();
+        SudokuBoard testRead = SudokuBoardDaoFactory.getFileDao("output.cpsb").read();
         assertTrue(equalBoards(result, testRead));
     }
     

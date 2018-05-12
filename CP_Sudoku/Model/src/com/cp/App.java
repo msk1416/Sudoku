@@ -13,9 +13,9 @@ public class App {
     public static void main(final String[] args) {
         BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
         
-        SudokuBoardDaoFactory.getFileDao("output.dat").write(solver.fillBoard());
+        SudokuBoardDaoFactory.getFileDao("sb1.cpsb").write(solver.fillBoard());
         
-        SudokuBoard testRead = SudokuBoardDaoFactory.getFileDao("output.dat").read();
+        SudokuBoard testRead = SudokuBoardDaoFactory.getFileDao("sb1.cpsb").read();
         testRead.print();
         
     }

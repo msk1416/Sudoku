@@ -7,14 +7,29 @@ import com.cp.Cell;
 import com.cp.elems.SudokuBoard;
 import com.cp.solver.BacktrackingSudokuSolver;
 
+import application.Main;
+
 public class Game {
     private String difficulty;
+    
+    public String getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(String difficulty) {
+        this.difficulty = difficulty;
+    }
+
     //easy --> 9 cells
     //medium --> 6
     //hard --> 4
     private SudokuBoard solution;
     private SudokuBoard gameBoard;
     
+    public SudokuBoard getGameBoard() {
+        return gameBoard;
+    }
+
     public Game(String diff) {
         this.difficulty = diff;
         gameBoard = new SudokuBoard();
@@ -25,6 +40,16 @@ public class Game {
             gameBoard.print();
         }
         
+    }
+    
+    public Game(SudokuBoard board) {
+        this.difficulty = ";;;";
+        this.gameBoard = board;
+        BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
+        this.solution = solver.fillBoard();
+        if (this.solution.isResolved()) {
+            gameBoard.print();
+        }
     }
     
     public boolean isBoardCorrectlyFilled() {
@@ -49,11 +74,11 @@ public class Game {
     
     private void setInitialBoard() {
         int initialCells = 0;
-        if (difficulty.equals("Easy")) {
+        if (difficulty.equals(Main.labels.getString("difficulty.easy"))) {
             initialCells = 9;
-        } else if (difficulty.equals("Medium")) {
+        } else if (difficulty.equals(Main.labels.getString("difficulty.medium"))) {
             initialCells = 6;
-        } else if (difficulty.equals("Hard")) {
+        } else if (difficulty.equals(Main.labels.getString("difficulty.hard"))) {
             initialCells = 4;
         } else {
             return;
@@ -71,6 +96,15 @@ public class Game {
                 i--;
             }
             
+        }
+        
+    }
+    
+    public void loadSolution() {
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                gameBoard.set(i, j, solution.get(i, j));
+            }
         }
         
     }

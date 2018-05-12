@@ -10,8 +10,9 @@ import com.cp.elems.SudokuBoard;
 
 public class FileSudokuBoardDao implements Dao<SudokuBoard> {
     private String fileName;
+    private final String ext = ".cpsb";
     public FileSudokuBoardDao(final String fn) {
-        this.fileName = fn;
+        this.fileName = fn.substring(0, fn.indexOf('.')) + ext;
     }
     public SudokuBoard read() {
         try (FileInputStream fis = new FileInputStream(fileName); 

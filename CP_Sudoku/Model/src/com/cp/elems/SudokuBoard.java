@@ -21,6 +21,10 @@ public class SudokuBoard implements Serializable, Cloneable {
     private ArrayList<ArrayList<SudokuField>> board;
     private boolean resolved = false;
 
+    public void setResolved(boolean resolved) {
+        this.resolved = resolved;
+    }
+
     public SudokuBoard() {
         board = new ArrayList<ArrayList<SudokuField>>(N);
         for (int i = 0; i < N; i++) {

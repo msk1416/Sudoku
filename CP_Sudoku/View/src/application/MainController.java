@@ -1,9 +1,13 @@
 package application;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Locale;
 import java.util.ResourceBundle;
+
+import com.cp.dao.SudokuBoardDaoFactory;
+import com.cp.elems.SudokuBoard;
 
 import application.play.Game;
 import application.play.GameController;
@@ -17,6 +21,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -31,18 +36,20 @@ public class MainController implements Initializable {
     Label lblSelectDiff;
     @FXML
     ComboBox langBox;
-    Locale currentLocale;
-    ResourceBundle labels;
-    ObservableList<String> diffs = FXCollections.observableArrayList();
-
-
+    @FXML
+    Button loadBtn;
+    @FXML
+    Label lblOr;
+    @FXML
+    Label lblCompleted;
+    final FileChooser fileChooser = new FileChooser();
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         langBox.setItems(Main.LANGS);
-        langBox.setPromptText(langBox.getItems().get(0).toString());
-        currentLocale = getCurrentLocale();
-        labels = ResourceBundle.getBundle("SudokuBundle", currentLocale);
+        setBoxLanguage();
+        Main.currentLocale = getCurrentLocale();
+        Main.labels = ResourceBundle.getBundle("SudokuBundle", Main.currentLocale);
         changeLang();
         /*lblSelectDiff.setText(labels.getString("main.error.difficulty"));
         lblWelcome.setText(labels.getString("welcome.title"));
@@ -52,12 +59,22 @@ public class MainController implements Initializable {
     
     @FXML
     void loadGame() {
-        if (difficultyBox.getValue() == null) {
+        loadGame(null);
+    }
+    
+    void loadGame(SudokuBoard board) {
+        if (difficultyBox.getValue() == null && board == null) {
             lblSelectDiff.setVisible(true);
         } else {
             lblSelectDiff.setVisible(false);
             difficultyBox.getValue();
-            Game game = new Game(String.valueOf(difficultyBox.getValue()));
+            Game game;
+            
+            if (board == null) {
+                game = new Game(String.valueOf(difficultyBox.getValue()));
+            } else {
+                game = new Game(board);
+            }
             //change to game window
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/play/GameScene.fxml"));
             AnchorPane root;
@@ -81,14 +98,17 @@ public class MainController implements Initializable {
     @FXML
     void changeLang() {
         //TODO: reset stage
-        currentLocale = getCurrentLocale();
-        labels = ResourceBundle.getBundle("SudokuBundle", currentLocale);
-        lblSelectDiff.setText(labels.getString("main.error.difficulty"));
-        lblWelcome.setText(labels.getString("welcome.title"));
-        difficultyBox.setPromptText(labels.getString("select.difficulty"));
-        startBtn.setText(labels.getString("start"));
+        Main.currentLocale = getCurrentLocale();
+        Main.labels = ResourceBundle.getBundle("SudokuBundle", Main.currentLocale);
+        lblSelectDiff.setText(Main.labels.getString("main.error.difficulty"));
+        lblWelcome.setText(Main.labels.getString("welcome.title"));
+        difficultyBox.setPromptText(Main.labels.getString("select.difficulty"));
+        startBtn.setText(Main.labels.getString("start"));
         setDifficulties();
-        difficultyBox.setItems(diffs);
+        difficultyBox.setItems(Main.diffs);
+        loadBtn.setText(Main.labels.getString("main.load"));
+        lblOr.setText(Main.labels.getString("main.or"));
+        lblCompleted.setText(Main.labels.getString("err.completed.game"));
     }
     
     private Locale getCurrentLocale() {
@@ -96,13 +116,54 @@ public class MainController implements Initializable {
             if (langBox.getValue().toString().contains("English"))
                 return Locale.ENGLISH;
             else return new Locale (langBox.getValue().toString());
+        } else if (Main.currentLocale != null) {
+            return Main.currentLocale;            
         } else return Locale.ENGLISH;
+        
     }
     
-    private void setDifficulties() {
-        diffs.removeAll(diffs);
-        diffs.add(labels.getString("difficulty.easy"));
-        diffs.add(labels.getString("difficulty.medium"));
-        diffs.add(labels.getString("difficulty.hard"));
+    public static void setDifficulties() {
+        Main.diffs.removeAll(Main.diffs);
+        Main.diffs.add(Main.labels.getString("difficulty.easy"));
+        Main.diffs.add(Main.labels.getString("difficulty.medium"));
+        Main.diffs.add(Main.labels.getString("difficulty.hard"));
     }
+    
+    private void setBoxLanguage() {
+        if (Main.currentLocale == null) {
+            langBox.setPromptText(Main.LANGS.get(0));
+        } else {
+            String locale = Main.currentLocale.getLanguage();
+            for (int i = 0; i < Main.LANGS.size(); i++) {
+                if (Main.LANGS.get(i).toLowerCase().contains(locale)) {
+                    langBox.setPromptText(Main.LANGS.get(i));
+                    return;
+                }
+            }
+            langBox.setPromptText(Main.LANGS.get(0));
+        }
+    }
+    
+    @FXML
+    void chooseFileFromDisk() {
+        configureFileChooser(fileChooser);
+        File file = fileChooser.showOpenDialog(langBox.getScene().getWindow());
+        if (file != null) {
+            SudokuBoard loadedBoard = SudokuBoardDaoFactory.getFileDao(file.getAbsolutePath()).read();
+            if (!loadedBoard.isResolved())loadGame(loadedBoard);
+            else lblCompleted.setVisible(true);
+        } else {
+            System.out.println("null");
+        }
+    }
+    
+    private void configureFileChooser(final FileChooser fileChooser) {      
+                fileChooser.setTitle("View Pictures");
+                fileChooser.setInitialDirectory(
+                    new File(System.getProperty("user.home"))
+                );                 
+                fileChooser.getExtensionFilters().addAll(
+                    new FileChooser.ExtensionFilter("Sudoku Board", "*.cpsb")
+                );
+        }
 }
