@@ -3,11 +3,13 @@ package application.play;
 import java.awt.Font;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Locale;
 import java.util.Random;
 import java.util.ResourceBundle;
 
 import com.cp.elems.SudokuBoard;
 
+import application.Main;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.Event;
@@ -18,6 +20,7 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -34,6 +37,8 @@ public class GameController {
     GridPane boardGrid;
     @FXML
     Label lblError;
+    @FXML
+    ComboBox langBox;
     private String errorEmptyCells = "There are empty cells in the board.";
     private String errorRuleViolations = "The numbers entered cause rule violations.";
     private String msgGameCompleted = "Congratulations. You completed this sudoku.";
@@ -41,6 +46,9 @@ public class GameController {
     private String difficulty;
     
     public void init(Game game, String difficulty) {
+        langBox.setItems(Main.LANGS);
+        langBox.setPromptText(langBox.getItems().get(0).toString());
+        ResourceBundle labels = ResourceBundle.getBundle("SudokuBundle", Locale.ENGLISH);
         lblTitle.setText(lblTitle.getText().replaceFirst("-DIFF-", difficulty));
         this.difficulty = difficulty;
         this.currentGame = game;

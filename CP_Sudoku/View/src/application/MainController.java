@@ -22,6 +22,8 @@ import javafx.stage.StageStyle;
 
 public class MainController implements Initializable {
     @FXML
+    Label lblWelcome;
+    @FXML
     ComboBox difficultyBox;
     @FXML
     Button startBtn;
@@ -29,22 +31,23 @@ public class MainController implements Initializable {
     Label lblSelectDiff;
     @FXML
     ComboBox langBox;
-    
-    ObservableList<String> diffs = FXCollections.observableArrayList(
-            "Easy",
-            "Medium",
-            "Hard"
-        );
+    Locale currentLocale;
+    ResourceBundle labels;
+    ObservableList<String> diffs = FXCollections.observableArrayList();
 
 
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        difficultyBox.setItems(diffs);
         langBox.setItems(Main.LANGS);
         langBox.setPromptText(langBox.getItems().get(0).toString());
-        ResourceBundle labels = ResourceBundle.getBundle("SudokuBundle", Locale.ENGLISH);
-        
+        currentLocale = getCurrentLocale();
+        labels = ResourceBundle.getBundle("SudokuBundle", currentLocale);
+        changeLang();
+        /*lblSelectDiff.setText(labels.getString("main.error.difficulty"));
+        lblWelcome.setText(labels.getString("welcome.title"));
+        difficultyBox.setPromptText(labels.getString("select.difficulty"));
+        startBtn.setText(labels.getString("start"));*/
     }
     
     @FXML
@@ -73,5 +76,33 @@ public class MainController implements Initializable {
             }
         }
         
+    }
+    
+    @FXML
+    void changeLang() {
+        //TODO: reset stage
+        currentLocale = getCurrentLocale();
+        labels = ResourceBundle.getBundle("SudokuBundle", currentLocale);
+        lblSelectDiff.setText(labels.getString("main.error.difficulty"));
+        lblWelcome.setText(labels.getString("welcome.title"));
+        difficultyBox.setPromptText(labels.getString("select.difficulty"));
+        startBtn.setText(labels.getString("start"));
+        setDifficulties();
+        difficultyBox.setItems(diffs);
+    }
+    
+    private Locale getCurrentLocale() {
+        if (langBox.getValue() != null) {
+            if (langBox.getValue().toString().contains("English"))
+                return Locale.ENGLISH;
+            else return new Locale (langBox.getValue().toString());
+        } else return Locale.ENGLISH;
+    }
+    
+    private void setDifficulties() {
+        diffs.removeAll(diffs);
+        diffs.add(labels.getString("difficulty.easy"));
+        diffs.add(labels.getString("difficulty.medium"));
+        diffs.add(labels.getString("difficulty.hard"));
     }
 }
