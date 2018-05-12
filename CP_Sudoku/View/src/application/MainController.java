@@ -17,6 +17,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -166,4 +168,23 @@ public class MainController implements Initializable {
                     new FileChooser.ExtensionFilter("Sudoku Board", "*.cpsb")
                 );
         }
+    
+    @FXML
+    void loadInfo() {
+        ResourceBundle info = ResourceBundle.getBundle("InfoBundle", Main.currentLocale);
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setTitle("Info window");
+        alert.setHeaderText("About the author");
+        String msg = Main.labels.getString("info.name") + ": " + info.getString("Author") + "\n" +
+                   Main.labels.getString("info.from") + ": " + info.getString("Nationality") + "\n" +
+                   Main.labels.getString("info.born") + ": " + info.getString("Birth") + "\n" +
+                   Main.labels.getString("info.uni.studies") + ": " + info.getString("Studies") + "\n" +
+                   Main.labels.getString("info.uni.home") + ": " + info.getString("HomeUni") + "\n" +
+                   Main.labels.getString("info.uni.guest") + ": " + info.getString("GuestUni") + "\n" +
+                   Main.labels.getString("info.uni.course") + ": " + info.getString("Studies");
+                   ;
+        alert.setContentText(msg);
+        alert.showAndWait();
+
+    }
 }
