@@ -7,13 +7,18 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
+import org.apache.log4j.Logger;
+
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
+
+import application.MainController;
 
 public class SudokuField implements Serializable, Cloneable, Comparable<SudokuField> {
     /**
      * 
      */
+    final static Logger logger = Logger.getLogger(SudokuField.class);
     private static final long serialVersionUID = -7945057612502061554L;
     private int value;
     
@@ -74,7 +79,7 @@ public class SudokuField implements Serializable, Cloneable, Comparable<SudokuFi
             object = baos.toByteArray();
             
         } catch (IOException ioe) {
-            System.out.println(ioe);
+            logger.debug(ioe);
             return null;
         }
         

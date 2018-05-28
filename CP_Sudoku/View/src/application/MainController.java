@@ -6,6 +6,8 @@ import java.net.URL;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
+import org.apache.log4j.Logger;
+
 import com.cp.dao.SudokuBoardDaoFactory;
 import com.cp.elems.SudokuBoard;
 
@@ -28,6 +30,10 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class MainController implements Initializable {
+	
+	final static Logger logger = Logger.getLogger(MainController.class);
+	
+	
     @FXML
     Label lblWelcome;
     @FXML
@@ -53,10 +59,7 @@ public class MainController implements Initializable {
         Main.currentLocale = getCurrentLocale();
         Main.labels = ResourceBundle.getBundle("SudokuBundle", Main.currentLocale);
         changeLang();
-        /*lblSelectDiff.setText(labels.getString("main.error.difficulty"));
-        lblWelcome.setText(labels.getString("welcome.title"));
-        difficultyBox.setPromptText(labels.getString("select.difficulty"));
-        startBtn.setText(labels.getString("start"));*/
+        logger.debug("Application initialized.");
     }
     
     @FXML
@@ -99,7 +102,6 @@ public class MainController implements Initializable {
     
     @FXML
     void changeLang() {
-        //TODO: reset stage
         Main.currentLocale = getCurrentLocale();
         Main.labels = ResourceBundle.getBundle("SudokuBundle", Main.currentLocale);
         lblSelectDiff.setText(Main.labels.getString("main.error.difficulty"));
@@ -155,7 +157,7 @@ public class MainController implements Initializable {
             if (!loadedBoard.isResolved())loadGame(loadedBoard);
             else lblCompleted.setVisible(true);
         } else {
-            System.out.println("null");
+            logger.debug("null file");
         }
     }
     

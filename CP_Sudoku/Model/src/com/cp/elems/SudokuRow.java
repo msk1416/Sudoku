@@ -8,11 +8,15 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 
+import application.MainController;
+
 public class SudokuRow extends SudokuLine implements Cloneable {
-    
+    final static Logger logger = Logger.getLogger(SudokuRow.class);
     @Override
     public String toString() {
         return MoreObjects.toStringHelper(this.getClass())
@@ -51,7 +55,7 @@ public class SudokuRow extends SudokuLine implements Cloneable {
             object = baos.toByteArray();
             
         } catch (IOException ioe) {
-            System.out.println(ioe);
+            logger.debug(ioe);
             return null;
         }
         

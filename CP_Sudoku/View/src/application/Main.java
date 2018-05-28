@@ -12,10 +12,11 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.fxml.FXMLLoader;
 
+import org.apache.log4j.Logger;
 
 public class Main extends Application {
     
-        
+    final static Logger logger = Logger.getLogger(Main.class);
 
     public static ObservableList<String> LANGS = FXCollections.observableArrayList(
             "English",

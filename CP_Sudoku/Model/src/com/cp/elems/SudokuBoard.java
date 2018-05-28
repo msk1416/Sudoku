@@ -9,14 +9,19 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import org.apache.log4j.Logger;
+
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
+
+import application.MainController;
 
 public class SudokuBoard implements Serializable, Cloneable {
     /**
      * 
      */
     private static final long serialVersionUID = -3162808268825390492L;
+    final static Logger logger = Logger.getLogger(SudokuBoard.class);
     static final int N = 9;
     private ArrayList<ArrayList<SudokuField>> board;
     private boolean resolved = false;
@@ -118,14 +123,16 @@ public class SudokuBoard implements Serializable, Cloneable {
     }
     
     public void print() {
-        System.out.println("-------------------------");
+        logger.debug("\n-------------------------");
+        String printResult = "";
+        printResult += '\n';
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
-                System.out.print(String.valueOf(board.get(i).get(j).getFieldValue() +  "  "));
+                printResult += String.valueOf(board.get(i).get(j).getFieldValue() +  "  ");
             }
-            System.out.println();
+            printResult += '\n';
         }
-        
+        logger.info(printResult);
     }
     
     @Override
@@ -168,7 +175,7 @@ public class SudokuBoard implements Serializable, Cloneable {
             object = baos.toByteArray();
             
         } catch (IOException ioe) {
-            System.out.println(ioe);
+            logger.debug(ioe);
             return null;
         }
         

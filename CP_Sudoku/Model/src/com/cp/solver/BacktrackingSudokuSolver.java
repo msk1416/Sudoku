@@ -2,11 +2,16 @@ package com.cp.solver;
 
 import java.util.Random;
 
+import org.apache.log4j.Logger;
+
 import com.cp.Cell;
 import com.cp.elems.SudokuBoard;
 import com.cp.inteface.SudokuSolver;
 
+import application.MainController;
+
 public class BacktrackingSudokuSolver implements SudokuSolver {
+    final static Logger logger = Logger.getLogger(BacktrackingSudokuSolver.class);
     private static final int N = 9;
     public SudokuBoard board;
     public void main(final String[] args) {
@@ -20,15 +25,15 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
         //no need to initialize board cells, as default value is already 0
         //only initial random cells 
         initializeRandomCells(5); 
-        System.out.println("Initial board game:");
+        logger.info("\nInitial board game:");
         printBoard();
-        System.out.println("-------------------------");
+        logger.info("\n-------------------------");
         solve(board);
         if (board.isResolved()) {
             printBoard();
             return board;
         } else {
-            System.out.println("This sudoku board could not be solved.");
+            logger.info("This sudoku board could not be solved.");
             return null;
         }
     }
@@ -128,12 +133,14 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
     }
 
     private void printBoard() {
+        String printResult = "\n";
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
-                System.out.print(String.valueOf(board.get(i, j) +  "  "));
+                printResult += (String.valueOf(board.get(i, j) +  "  "));
             }
-            System.out.println();
+            printResult += '\n';
         }
+        logger.info(printResult);;
     }
 
     private Cell getNextCell(final Cell c) {
