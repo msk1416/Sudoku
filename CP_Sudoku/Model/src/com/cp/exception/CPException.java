@@ -19,7 +19,9 @@ public class CPException extends Exception {
         if (Main.currentLocale == null) 
             labels = ResourceBundle.getBundle("SudokuBundle", Locale.ENGLISH);
         else {
-            if (!labels.getLocale().equals(Main.currentLocale))
+            if (labels == null) {
+                labels = ResourceBundle.getBundle("SudokuBundle", Main.currentLocale);
+            } else if (!labels.getLocale().equals(Main.currentLocale))
                 labels = ResourceBundle.getBundle("SudokuBundle", Main.currentLocale);
         }
     }
@@ -29,7 +31,9 @@ public class CPException extends Exception {
         if (Main.currentLocale == null) 
             labels = ResourceBundle.getBundle("SudokuBundle", Locale.ENGLISH);
         else {
-            if (!labels.getLocale().equals(Main.currentLocale))
+            if (labels == null) {
+                labels = ResourceBundle.getBundle("SudokuBundle", Main.currentLocale);
+            } else if (!labels.getLocale().equals(Main.currentLocale))
                 labels = ResourceBundle.getBundle("SudokuBundle", Main.currentLocale);
         }
     }
