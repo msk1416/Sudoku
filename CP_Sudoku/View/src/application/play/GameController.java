@@ -1,25 +1,20 @@
 package application.play;
 
-import java.awt.Font;
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.util.Locale;
-import java.util.Random;
 import java.util.ResourceBundle;
 
+import org.apache.log4j.Logger;
+
 import com.cp.dao.SudokuBoardDaoFactory;
-import com.cp.elems.SudokuBoard;
+import com.cp.exception.CPFileException;
 
 import application.Main;
 import application.MainController;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -31,8 +26,9 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.scene.input.KeyEvent;
-public class GameController {
 
+public class GameController {
+    final static Logger logger = Logger.getLogger(GameController.class);
     @FXML
     Label lblTitle;
     @FXML
@@ -42,7 +38,7 @@ public class GameController {
     @FXML
     Label lblError;
     @FXML
-    ComboBox langBox;
+    ComboBox<String> langBox;
     @FXML
     Button checkBtn;
     @FXML
@@ -69,7 +65,6 @@ public class GameController {
         loaded = true;
     }
     
-    @SuppressWarnings("unchecked")
     private void initBoard() {
         int SIZE = 9;
         int length = SIZE;
@@ -94,10 +89,10 @@ public class GameController {
                 final int copy_x = x;
                 final int copy_y = y;
                 tf.setEditable(number != 0 ? false : true);
-                tf.addEventFilter(KeyEvent.KEY_TYPED, new EventHandler() {
+                tf.addEventFilter(KeyEvent.KEY_TYPED, new EventHandler<KeyEvent>() {
 
                     @Override
-                    public void handle(Event event) {
+                    public void handle(KeyEvent event) {
                         char in = ((KeyEvent)event).getCharacter().charAt(0);
                         if (!Character.isDigit(in) || tf.getText().length() > 0) {
                             event.consume();
@@ -108,6 +103,7 @@ public class GameController {
                             }
                         }
                     }
+
                     
                 });
 
@@ -128,8 +124,8 @@ public class GameController {
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            logger.error(e.getLocalizedMessage());
+            logger.error(e.getStackTrace());
         }
     }
     
@@ -201,7 +197,12 @@ public class GameController {
         
         
         if (file != null) {
-            SudokuBoardDaoFactory.getFileDao(file.getAbsolutePath()).write(currentGame.getGameBoard());
+            try {
+				SudokuBoardDaoFactory.getFileDao(file.getAbsolutePath()).write(currentGame.getGameBoard());
+			} catch (CPFileException e) {
+				logger.error(e.getLocalizedMessage());
+	            logger.error(e.getStackTrace());
+			}
         }
     }
     

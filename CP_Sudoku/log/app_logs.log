@@ -292,3 +292,2000 @@ Initial board game:
 0  8  0  0  0  0  0  0  0  
 0  0  0  0  0  0  0  0  0  
 
+2018-05-28 18:47:52 DEBUG MainController:62 - Application initialized.
+2018-05-28 18:47:57 INFO  BacktrackingSudokuSolver:29 - 
+Initial board game:
+2018-05-28 18:47:57 INFO  BacktrackingSudokuSolver:144 - 
+0  2  0  0  0  0  0  0  0  
+0  0  0  0  0  4  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  6  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  6  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 18:47:57 INFO  BacktrackingSudokuSolver:31 - 
+-------------------------
+2018-05-28 18:47:57 ERROR SudokuField:43 - Value out of bounds.
+2018-05-28 18:48:38 DEBUG MainController:62 - Application initialized.
+2018-05-28 18:48:41 INFO  BacktrackingSudokuSolver:29 - 
+Initial board game:
+2018-05-28 18:48:41 INFO  BacktrackingSudokuSolver:144 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  1  0  0  
+0  0  7  0  0  0  0  0  0  
+0  0  0  6  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  2  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 18:48:41 INFO  BacktrackingSudokuSolver:31 - 
+-------------------------
+2018-05-28 18:48:41 INFO  BacktrackingSudokuSolver:144 - 
+4  1  2  3  5  6  7  8  9  
+3  5  8  1  7  9  2  4  6  
+6  7  9  2  4  8  1  3  5  
+1  2  7  4  3  5  6  9  8  
+5  8  3  6  9  1  4  2  7  
+9  4  6  7  8  2  3  5  1  
+7  6  5  8  2  3  9  1  4  
+2  9  1  5  6  4  8  7  3  
+8  3  4  9  1  7  5  6  2  
+
+2018-05-28 18:48:41 DEBUG SudokuBoard:127 - 
+-------------------------
+2018-05-28 18:48:41 INFO  SudokuBoard:136 - 
+0  0  0  3  0  0  0  0  0  
+0  0  0  1  0  0  0  0  0  
+0  7  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+5  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  3  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  4  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 18:49:14 DEBUG MainController:62 - Application initialized.
+2018-05-28 18:50:10 INFO  BacktrackingSudokuSolver:29 - 
+Initial board game:
+2018-05-28 18:50:10 INFO  BacktrackingSudokuSolver:144 - 
+0  0  0  0  0  4  0  0  0  
+4  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  60  0  0  
+0  0  0  0  0  5  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  60  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 18:50:10 INFO  BacktrackingSudokuSolver:31 - 
+-------------------------
+2018-05-28 18:50:10 INFO  BacktrackingSudokuSolver:37 - This sudoku board could not be solved.
+2018-05-28 18:50:54 DEBUG MainController:62 - Application initialized.
+2018-05-28 19:20:57 INFO  BacktrackingSudokuSolver:30 - 
+Initial board game:
+2018-05-28 19:20:57 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  1  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  3  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  8  0  0  0  0  0  0  0  
+0  0  0  0  0  2  0  1  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 19:20:57 INFO  BacktrackingSudokuSolver:32 - 
+-------------------------
+2018-05-28 19:20:57 INFO  BacktrackingSudokuSolver:149 - 
+8  1  2  3  4  5  6  7  9  
+3  4  6  1  7  9  2  5  8  
+5  7  9  2  6  8  1  3  4  
+1  2  4  5  3  6  8  9  7  
+6  3  5  8  9  7  4  2  1  
+7  9  8  4  2  1  3  6  5  
+2  8  1  7  5  3  9  4  6  
+4  6  7  9  8  2  5  1  3  
+9  5  3  6  1  4  7  8  2  
+
+2018-05-28 19:20:57 DEBUG SudokuBoard:127 - 
+-------------------------
+2018-05-28 19:20:57 INFO  SudokuBoard:136 - 
+8  1  2  3  4  5  6  7  9  
+3  4  6  1  7  9  2  5  8  
+5  7  9  2  6  8  1  3  4  
+1  2  4  5  3  6  8  9  7  
+6  3  5  8  9  7  4  2  1  
+7  9  8  4  2  1  3  6  5  
+2  8  1  7  5  3  9  4  6  
+4  6  7  9  8  2  5  1  3  
+9  5  3  6  1  4  7  8  2  
+
+2018-05-28 19:21:14 DEBUG MainController:62 - Application initialized.
+2018-05-28 19:21:19 INFO  BacktrackingSudokuSolver:30 - 
+Initial board game:
+2018-05-28 19:21:19 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  4  0  0  
+0  0  0  0  0  0  1  0  0  
+0  0  0  0  0  0  0  0  0  
+2  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  8  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  5  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 19:21:19 INFO  BacktrackingSudokuSolver:32 - 
+-------------------------
+2018-05-28 19:21:19 INFO  BacktrackingSudokuSolver:149 - 
+7  1  2  3  5  6  4  8  9  
+3  4  5  2  8  9  1  6  7  
+6  8  9  1  4  7  2  3  5  
+2  3  1  4  6  5  7  9  8  
+4  7  8  9  1  3  5  2  6  
+5  9  6  7  2  8  3  1  4  
+1  5  3  6  9  4  8  7  2  
+9  2  4  8  7  1  6  5  3  
+8  6  7  5  3  2  9  4  1  
+
+2018-05-28 19:21:19 DEBUG SudokuBoard:127 - 
+-------------------------
+2018-05-28 19:21:19 INFO  SudokuBoard:136 - 
+0  0  0  0  0  6  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  8  0  0  0  0  0  0  0  
+0  3  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  7  0  6  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 19:21:43 DEBUG MainController:62 - Application initialized.
+2018-05-28 19:24:26 DEBUG MainController:62 - Application initialized.
+2018-05-28 19:40:08 DEBUG MainController:63 - Application initialized.
+2018-05-28 19:40:12 INFO  BacktrackingSudokuSolver:30 - 
+Initial board game:
+2018-05-28 19:40:12 INFO  BacktrackingSudokuSolver:149 - 
+7  0  0  0  0  2  0  0  0  
+0  0  0  0  0  0  0  0  0  
+6  0  0  0  0  0  0  5  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  4  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 19:40:12 INFO  BacktrackingSudokuSolver:32 - 
+-------------------------
+2018-05-28 19:40:12 INFO  BacktrackingSudokuSolver:149 - 
+7  1  3  4  5  2  6  8  9  
+2  4  5  6  8  9  1  3  7  
+6  8  9  1  3  7  2  5  4  
+1  2  4  3  6  5  7  9  8  
+3  6  7  2  9  8  5  4  1  
+5  9  8  7  1  4  3  2  6  
+4  3  1  8  2  6  9  7  5  
+8  5  2  9  7  1  4  6  3  
+9  7  6  5  4  3  8  1  2  
+
+2018-05-28 19:40:12 DEBUG SudokuBoard:127 - 
+-------------------------
+2018-05-28 19:40:12 INFO  SudokuBoard:136 - 
+0  0  3  0  0  0  0  0  0  
+0  4  0  0  0  0  0  0  0  
+0  0  9  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  4  0  2  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  4  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 19:40:36 DEBUG MainController:63 - Application initialized.
+2018-05-28 19:40:47 ERROR MainController:161 - No resource for An exception happened while reading from diskkey
+2018-05-28 19:40:47 ERROR MainController:162 - [Ljava.lang.StackTraceElement;@7edfe6e7
+2018-05-28 19:41:57 ERROR MainController:161 - No resource for An exception happened while reading from diskkey
+2018-05-28 19:41:57 ERROR MainController:162 - [Ljava.lang.StackTraceElement;@557fe2b9
+2018-05-28 19:43:33 DEBUG MainController:63 - Application initialized.
+2018-05-28 19:43:39 ERROR MainController:161 - S'ha llançat una excepció mentre es llegia de disc
+2018-05-28 19:43:39 ERROR MainController:162 - [Ljava.lang.StackTraceElement;@54b8c072
+2018-05-28 19:44:41 DEBUG MainController:63 - Application initialized.
+2018-05-28 19:44:46 ERROR MainController:163 - An exception happened while reading from disk
+2018-05-28 19:45:31 DEBUG MainController:63 - Application initialized.
+2018-05-28 19:47:50 DEBUG MainController:63 - Application initialized.
+2018-05-28 19:47:59 ERROR MainController:163 - El fitxer carregat està corrupte o bé no és un objecte de SudokuBoard
+2018-05-28 19:48:08 ERROR MainController:163 - El fitxer carregat està corrupte o bé no és un objecte de SudokuBoard
+2018-05-28 19:51:01 DEBUG MainController:63 - Application initialized.
+2018-05-28 19:51:05 ERROR MainController:163 - The loaded file is corrupted or not a SudokuBoard object
+2018-05-28 19:51:12 ERROR MainController:163 - The loaded file is corrupted or not a SudokuBoard object
+2018-05-28 19:52:59 DEBUG MainController:63 - Application initialized.
+2018-05-28 19:53:03 ERROR MainController:163 - The loaded file is corrupted or not a SudokuBoard object
+2018-05-28 19:53:11 ERROR MainController:163 - The loaded file is corrupted or not a SudokuBoard object
+2018-05-28 19:55:47 DEBUG MainController:63 - Application initialized.
+2018-05-28 19:55:54 ERROR MainController:163 - The loaded file is corrupted or not a SudokuBoard object
+2018-05-28 19:56:02 ERROR MainController:163 - El fitxer carregat està corrupte o bé no és un objecte de SudokuBoard
+2018-05-28 20:13:56 DEBUG MainController:63 - Application initialized.
+2018-05-28 20:17:33 DEBUG MainController:63 - Application initialized.
+2018-05-28 20:17:38 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:17:38 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  1  0  0  0  0  
+0  0  0  0  0  7  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  3  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  4  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:17:38 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:17:38 INFO  BacktrackingSudokuSolver:149 - 
+4  2  5  3  1  6  7  8  9  
+1  3  6  8  9  7  2  4  5  
+7  8  9  2  4  5  1  3  6  
+2  1  3  5  6  8  4  9  7  
+5  4  7  1  2  9  3  6  8  
+6  9  8  4  7  3  5  1  2  
+3  5  1  6  8  2  9  7  4  
+8  7  2  9  3  4  6  5  1  
+9  6  4  7  5  1  8  2  3  
+
+2018-05-28 20:17:38 DEBUG SudokuBoard:127 - 
+-------------------------
+2018-05-28 20:17:38 INFO  SudokuBoard:136 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  5  0  0  0  0  0  
+0  4  0  1  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  6  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:18:15 DEBUG MainController:63 - Application initialized.
+2018-05-28 20:18:20 ERROR MainController:163 - The loaded file is corrupted or not a SudokuBoard object
+2018-05-28 20:19:37 DEBUG MainController:63 - Application initialized.
+2018-05-28 20:23:14 DEBUG MainController:63 - Application initialized.
+2018-05-28 20:23:17 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:23:17 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  4  0  0  0  0  
+0  0  0  0  0  0  4  0  0  
+0  0  0  0  0  0  0  0  0  
+0  1  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  2  0  
+0  0  0  7  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:23:17 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:23:17 INFO  BacktrackingSudokuSolver:149 - 
+5  2  1  3  6  7  8  4  9  
+3  4  6  1  8  9  2  5  7  
+7  8  9  2  4  5  1  3  6  
+2  3  5  6  7  1  4  9  8  
+4  6  7  5  9  8  3  1  2  
+9  1  8  4  2  3  6  7  5  
+1  7  3  8  5  6  9  2  4  
+6  9  2  7  1  4  5  8  3  
+8  5  4  9  3  2  7  6  1  
+
+2018-05-28 20:23:17 DEBUG SudokuBoard:127 - 
+-------------------------
+2018-05-28 20:23:17 INFO  SudokuBoard:136 - 
+0  0  0  3  0  0  0  0  0  
+0  0  6  0  0  0  2  0  0  
+0  0  9  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  5  9  0  0  0  0  
+0  0  8  0  2  0  0  0  0  
+0  0  3  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:23:46 DEBUG MainController:63 - Application initialized.
+2018-05-28 20:23:53 ERROR MainController:163 - The loaded file is corrupted or not a SudokuBoard object
+2018-05-28 20:24:01 ERROR MainController:163 - El fitxer carregat està corrupte o bé no és un objecte de SudokuBoard
+2018-05-28 20:24:08 ERROR MainController:163 - S'ha llançat una excepció mentre es llegia de disc
+2018-05-28 20:24:41 ERROR MainController:163 - An exception happened while reading from disk
+2018-05-28 20:38:28 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:38:28 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  1  0  0  0  0  0  0  0  
+0  8  0  5  4  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:38:28 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:38:28 INFO  BacktrackingSudokuSolver:149 - 
+7  2  1  3  5  4  6  8  9  
+3  4  5  6  8  9  1  2  7  
+6  9  8  1  2  7  3  4  5  
+2  3  4  7  1  6  5  9  8  
+5  1  6  2  9  8  4  7  3  
+9  8  7  5  4  3  2  1  6  
+1  5  3  8  7  2  9  6  4  
+4  7  2  9  6  5  8  3  1  
+8  6  9  4  3  1  7  5  2  
+
+2018-05-28 20:38:28 ERROR SudokuField:43 - Value out of bounds.
+2018-05-28 20:38:28 ERROR SudokuField:43 - Value out of bounds.
+2018-05-28 20:38:28 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:38:28 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  2  0  0  
+0  5  0  0  0  0  0  0  0  
+0  2  7  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  1  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:38:28 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:38:28 INFO  BacktrackingSudokuSolver:149 - 
+4  1  2  3  5  6  7  8  9  
+3  6  8  1  7  9  2  4  5  
+7  5  9  2  4  8  1  3  6  
+1  2  7  4  3  5  6  9  8  
+5  3  6  8  9  2  4  1  7  
+8  9  4  7  6  1  3  5  2  
+2  4  1  5  8  7  9  6  3  
+6  7  5  9  1  3  8  2  4  
+9  8  3  6  2  4  5  7  1  
+
+2018-05-28 20:38:28 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:38:28 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+3  0  0  0  0  0  0  0  0  
+0  0  0  7  0  0  0  0  0  
+0  0  0  0  0  0  0  3  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  4  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  4  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:38:28 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:38:28 INFO  BacktrackingSudokuSolver:149 - 
+5  1  2  3  4  6  7  8  9  
+3  6  7  1  8  9  2  4  5  
+4  8  9  7  2  5  1  6  3  
+1  2  4  5  6  7  9  3  8  
+6  3  5  2  9  8  4  1  7  
+7  9  8  4  1  3  5  2  6  
+2  5  3  6  7  1  8  9  4  
+8  4  6  9  5  2  3  7  1  
+9  7  1  8  3  4  6  5  2  
+
+2018-05-28 20:38:28 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:38:28 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  5  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  3  0  
+1  0  0  0  0  0  0  0  0  
+0  6  0  0  0  0  2  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:38:28 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:38:28 INFO  BacktrackingSudokuSolver:149 - 
+3  1  2  5  4  6  7  8  9  
+4  5  7  3  8  9  1  2  6  
+6  8  9  1  2  7  4  3  5  
+1  2  3  4  5  8  6  9  7  
+5  6  4  7  9  3  2  1  8  
+7  9  8  2  6  1  3  5  4  
+2  3  5  8  7  4  9  6  1  
+8  4  6  9  1  2  5  7  3  
+9  7  1  6  3  5  8  4  2  
+
+2018-05-28 20:40:49 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:40:49 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  8  0  0  1  0  3  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  6  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  7  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:40:49 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:40:49 INFO  BacktrackingSudokuSolver:149 - 
+3  1  2  4  5  6  8  7  9  
+4  5  8  7  9  1  2  3  6  
+6  7  9  2  3  8  1  4  5  
+1  2  3  5  4  7  6  9  8  
+5  4  6  1  8  9  3  2  7  
+8  9  7  3  6  2  4  5  1  
+2  6  4  9  1  5  7  8  3  
+7  8  5  6  2  3  9  1  4  
+9  3  1  8  7  4  5  6  2  
+
+2018-05-28 20:40:49 ERROR SudokuField:43 - Value out of bounds.
+2018-05-28 20:40:49 ERROR SudokuField:43 - Value out of bounds.
+2018-05-28 20:40:49 ERROR SudokuField:43 - Value out of bounds.
+2018-05-28 20:40:49 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:40:49 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  6  0  0  0  0  0  0  0  
+0  5  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  6  8  0  
+0  0  0  0  0  0  1  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:40:49 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:40:49 INFO  BacktrackingSudokuSolver:149 - 
+2  1  3  4  5  6  7  9  8  
+4  7  5  1  8  9  2  3  6  
+6  8  9  2  3  7  4  1  5  
+1  6  2  3  4  5  8  7  9  
+7  5  4  6  9  8  3  2  1  
+3  9  8  7  1  2  5  6  4  
+5  2  1  9  7  4  6  8  3  
+9  4  6  8  2  3  1  5  7  
+8  3  7  5  6  1  9  4  2  
+
+2018-05-28 20:40:49 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:40:49 INFO  BacktrackingSudokuSolver:149 - 
+0  5  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  2  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  6  0  2  0  0  0  
+0  0  0  0  0  0  4  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:40:49 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:40:49 INFO  BacktrackingSudokuSolver:149 - 
+3  5  1  2  4  6  7  8  9  
+4  6  7  1  8  9  3  2  5  
+2  8  9  3  5  7  1  4  6  
+1  3  4  6  7  2  5  9  8  
+5  2  6  8  9  1  4  3  7  
+7  9  8  4  3  5  2  6  1  
+6  1  3  5  2  8  9  7  4  
+8  7  2  9  1  4  6  5  3  
+9  4  5  7  6  3  8  1  2  
+
+2018-05-28 20:40:49 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:40:49 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  4  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  7  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  2  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  7  0  0  0  6  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:40:49 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:40:49 INFO  BacktrackingSudokuSolver:149 - 
+5  1  2  3  6  8  4  7  9  
+3  4  7  1  2  9  5  6  8  
+6  8  9  7  4  5  1  2  3  
+1  2  3  4  5  7  8  9  6  
+4  5  6  8  9  2  3  1  7  
+7  9  8  6  1  3  2  4  5  
+2  3  5  9  7  1  6  8  4  
+8  7  4  2  3  6  9  5  1  
+9  6  1  5  8  4  7  3  2  
+
+2018-05-28 20:43:15 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:43:15 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  3  0  0  0  
+0  0  0  0  0  0  0  5  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  3  0  0  0  0  
+0  0  0  0  2  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  1  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:43:15 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:43:15 INFO  BacktrackingSudokuSolver:149 - 
+1  2  4  5  6  3  7  8  9  
+3  6  7  1  8  9  2  5  4  
+5  8  9  2  4  7  1  3  6  
+2  4  1  6  3  5  8  9  7  
+6  7  3  9  2  8  4  1  5  
+8  9  5  4  7  1  3  6  2  
+4  1  2  3  5  6  9  7  8  
+7  3  6  8  9  2  5  4  1  
+9  5  8  7  1  4  6  2  3  
+
+2018-05-28 20:43:15 ERROR SudokuField:43 - Value out of bounds.
+2018-05-28 20:43:15 ERROR SudokuField:43 - Value out of bounds.
+2018-05-28 20:43:15 ERROR SudokuField:43 - Value out of bounds.
+2018-05-28 20:43:15 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:43:15 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  1  0  
+0  0  0  0  0  0  0  0  0  
+8  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  2  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  2  0  3  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:43:15 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:43:15 INFO  BacktrackingSudokuSolver:149 - 
+2  3  4  5  6  7  8  1  9  
+1  5  6  2  8  9  3  4  7  
+8  7  9  1  3  4  2  5  6  
+3  1  2  4  5  6  7  9  8  
+4  6  7  8  9  1  5  2  3  
+5  9  8  7  2  3  1  6  4  
+6  8  1  9  7  2  4  3  5  
+9  2  5  3  4  8  6  7  1  
+7  4  3  6  1  5  9  8  2  
+
+2018-05-28 20:43:15 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:43:15 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  6  0  0  0  0  0  
+0  0  0  0  0  0  7  0  0  
+0  8  0  2  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:43:15 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:43:15 INFO  BacktrackingSudokuSolver:149 - 
+8  1  2  3  4  5  6  7  9  
+3  4  5  7  6  9  1  2  8  
+6  7  9  1  2  8  3  4  5  
+1  2  3  4  5  7  8  9  6  
+4  9  7  6  8  1  2  5  3  
+5  6  8  9  3  2  7  1  4  
+7  8  4  2  9  3  5  6  1  
+2  3  6  5  1  4  9  8  7  
+9  5  1  8  7  6  4  3  2  
+
+2018-05-28 20:43:15 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:43:15 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  6  0  0  
+0  0  0  7  0  4  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  3  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:43:15 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:43:15 INFO  BacktrackingSudokuSolver:149 - 
+3  1  2  5  8  9  6  4  7  
+5  6  8  7  1  4  2  3  9  
+4  7  9  2  6  3  1  5  8  
+1  2  3  4  5  7  8  9  6  
+6  4  5  1  9  8  3  7  2  
+8  9  7  3  2  6  4  1  5  
+2  3  1  6  7  5  9  8  4  
+7  8  4  9  3  2  5  6  1  
+9  5  6  8  4  1  7  2  3  
+
+2018-05-28 20:46:00 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:46:00 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  6  0  0  0  0  0  0  0  
+7  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  1  0  0  
+0  0  6  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  1  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:46:00 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:46:00 INFO  BacktrackingSudokuSolver:149 - 
+2  1  3  4  5  6  7  8  9  
+4  5  7  1  8  9  2  3  6  
+8  6  9  2  3  7  4  1  5  
+7  2  1  3  4  5  6  9  8  
+3  4  5  6  9  8  1  2  7  
+9  8  6  7  2  1  3  5  4  
+1  3  8  5  6  4  9  7  2  
+5  7  4  9  1  2  8  6  3  
+6  9  2  8  7  3  5  4  1  
+
+2018-05-28 20:46:00 ERROR SudokuField:43 - Value out of bounds.
+2018-05-28 20:46:00 ERROR SudokuField:43 - Value out of bounds.
+2018-05-28 20:46:00 ERROR SudokuField:43 - Value out of bounds.
+2018-05-28 20:46:00 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:46:00 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  8  0  0  
+0  0  0  6  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  5  0  0  0  0  0  0  0  
+0  0  4  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:46:00 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:46:00 INFO  BacktrackingSudokuSolver:149 - 
+4  1  2  3  5  8  6  7  9  
+3  6  8  1  7  9  2  4  5  
+5  7  9  2  4  6  8  1  3  
+1  2  3  6  8  4  5  9  7  
+6  4  5  7  9  1  3  2  8  
+8  9  7  5  2  3  1  6  4  
+2  5  1  4  3  7  9  8  6  
+9  3  4  8  6  2  7  5  1  
+7  8  6  9  1  5  4  3  2  
+
+2018-05-28 20:46:00 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:46:00 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  3  0  0  0  
+0  0  0  0  0  0  0  0  0  
+2  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  8  0  
+0  0  0  0  0  0  0  0  0  
+0  1  0  0  0  0  0  0  0  
+0  8  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:46:00 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:46:00 INFO  BacktrackingSudokuSolver:149 - 
+1  4  5  2  6  3  7  9  8  
+3  6  7  1  8  9  2  4  5  
+2  9  8  4  5  7  1  3  6  
+4  2  1  3  7  8  5  6  9  
+5  3  6  9  1  2  4  8  7  
+8  7  9  5  4  6  3  1  2  
+6  1  2  7  9  4  8  5  3  
+7  8  4  6  3  5  9  2  1  
+9  5  3  8  2  1  6  7  4  
+
+2018-05-28 20:46:00 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:46:00 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  3  0  0  0  0  
+0  0  0  0  0  8  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  1  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  6  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:46:00 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:46:00 INFO  BacktrackingSudokuSolver:149 - 
+8  1  2  4  5  6  3  7  9  
+3  4  5  2  7  9  1  6  8  
+6  7  9  8  3  1  2  4  5  
+1  2  3  5  4  8  6  9  7  
+4  5  6  3  9  7  8  1  2  
+7  9  8  1  6  2  4  5  3  
+2  3  4  7  1  5  9  8  6  
+5  6  1  9  8  3  7  2  4  
+9  8  7  6  2  4  5  3  1  
+
+2018-05-28 20:46:25 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:46:25 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  3  0  0  0  0  0  
+0  0  0  0  0  0  6  5  0  
+0  0  0  0  0  0  0  0  0  
+0  0  7  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  1  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:46:25 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:46:25 INFO  BacktrackingSudokuSolver:149 - 
+2  1  4  3  5  6  7  8  9  
+3  7  8  2  1  9  6  5  4  
+5  6  9  4  7  8  1  2  3  
+1  2  7  5  3  4  8  9  6  
+4  3  6  8  9  1  2  7  5  
+8  9  5  6  2  7  3  4  1  
+6  4  1  7  8  5  9  3  2  
+9  8  2  1  4  3  5  6  7  
+7  5  3  9  6  2  4  1  8  
+
+2018-05-28 20:46:25 DEBUG SudokuBoardTest:138 - Exception is NOT YET caught
+2018-05-28 20:46:25 ERROR SudokuField:43 - Value out of bounds.
+2018-05-28 20:46:25 ERROR SudokuField:43 - Value out of bounds.
+2018-05-28 20:46:25 ERROR SudokuField:43 - Value out of bounds.
+2018-05-28 20:46:25 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:46:25 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  2  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+8  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  4  0  
+0  0  0  0  0  0  8  0  0  
+0  0  0  0  0  0  6  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:46:25 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:46:25 INFO  BacktrackingSudokuSolver:149 - 
+2  1  3  4  5  6  7  8  9  
+4  5  6  7  8  9  2  1  3  
+7  8  9  1  2  3  4  5  6  
+1  2  4  3  6  5  9  7  8  
+8  3  5  9  4  7  1  6  2  
+6  9  7  2  1  8  3  4  5  
+3  6  1  5  7  2  8  9  4  
+5  4  2  8  9  1  6  3  7  
+9  7  8  6  3  4  5  2  1  
+
+2018-05-28 20:46:25 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:46:25 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  6  0  0  8  0  0  
+0  0  0  0  0  0  0  0  0  
+0  1  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  4  0  0  
+0  0  0  4  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:46:25 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:46:25 INFO  BacktrackingSudokuSolver:149 - 
+4  2  1  3  5  8  6  7  9  
+3  5  7  6  1  9  8  2  4  
+6  8  9  2  4  7  1  3  5  
+2  1  3  5  6  4  7  9  8  
+5  4  8  7  9  1  2  6  3  
+7  9  6  8  2  3  4  5  1  
+1  3  2  4  7  5  9  8  6  
+8  6  4  9  3  2  5  1  7  
+9  7  5  1  8  6  3  4  2  
+
+2018-05-28 20:46:25 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:46:25 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  6  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  7  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  8  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:46:25 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:46:25 INFO  BacktrackingSudokuSolver:149 - 
+7  1  2  3  4  5  6  8  9  
+3  4  5  6  8  9  1  2  7  
+8  6  9  1  2  7  3  4  5  
+1  2  3  4  5  6  7  9  8  
+4  5  6  7  9  8  2  1  3  
+9  8  7  2  1  3  4  5  6  
+2  3  8  5  6  1  9  7  4  
+5  7  1  9  3  4  8  6  2  
+6  9  4  8  7  2  5  3  1  
+
+2018-05-28 20:47:35 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:47:35 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  4  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  2  0  0  0  0  0  0  0  
+0  0  4  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  6  0  0  0  0  4  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:47:35 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:47:35 INFO  BacktrackingSudokuSolver:149 - 
+3  1  2  5  4  6  7  8  9  
+4  5  6  7  8  9  1  2  3  
+7  8  9  1  2  3  5  4  6  
+1  3  5  2  6  4  8  9  7  
+6  2  7  8  9  1  3  5  4  
+8  9  4  3  5  7  2  6  1  
+2  4  1  6  3  5  9  7  8  
+5  6  3  9  7  8  4  1  2  
+9  7  8  4  1  2  6  3  5  
+
+2018-05-28 20:47:35 DEBUG SudokuBoardTest:138 - Exception is NOT YET caught
+2018-05-28 20:47:35 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:47:35 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  8  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  2  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  5  0  0  0  0  
+0  5  0  0  0  0  0  0  0  
+0  0  0  0  0  2  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:47:35 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:47:35 INFO  BacktrackingSudokuSolver:149 - 
+5  1  2  3  8  4  6  7  9  
+3  4  6  2  7  9  1  5  8  
+7  8  9  1  6  5  2  3  4  
+1  2  3  4  9  6  5  8  7  
+4  7  5  8  2  1  3  9  6  
+6  9  8  7  5  3  4  1  2  
+2  5  1  9  4  7  8  6  3  
+8  3  7  6  1  2  9  4  5  
+9  6  4  5  3  8  7  2  1  
+
+2018-05-28 20:47:35 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:47:35 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  3  5  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  3  0  
+8  0  0  0  0  0  0  0  0  
+0  0  0  3  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:47:35 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:47:35 INFO  BacktrackingSudokuSolver:149 - 
+2  1  4  6  7  8  3  5  9  
+3  5  6  1  2  9  4  7  8  
+7  8  9  4  3  5  1  2  6  
+1  2  3  5  4  6  8  9  7  
+4  6  7  8  9  3  2  1  5  
+5  9  8  2  1  7  6  3  4  
+8  3  1  7  5  4  9  6  2  
+9  4  5  3  6  2  7  8  1  
+6  7  2  9  8  1  5  4  3  
+
+2018-05-28 20:47:35 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:47:35 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  2  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+8  0  0  0  0  0  0  0  0  
+0  0  7  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  5  0  
+0  0  0  0  0  0  0  1  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:47:35 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:47:35 INFO  BacktrackingSudokuSolver:149 - 
+2  1  3  4  5  6  7  8  9  
+4  5  8  2  7  9  1  3  6  
+6  7  9  1  3  8  2  4  5  
+8  2  1  3  6  4  5  9  7  
+3  4  7  5  9  2  8  6  1  
+5  9  6  7  8  1  3  2  4  
+1  3  2  6  4  7  9  5  8  
+7  8  4  9  2  5  6  1  3  
+9  6  5  8  1  3  4  7  2  
+
+2018-05-28 20:48:49 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:48:49 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  1  0  0  
+0  0  0  0  0  0  4  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  3  0  7  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:48:49 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:48:49 INFO  BacktrackingSudokuSolver:149 - 
+2  3  4  5  6  7  1  8  9  
+1  5  6  2  8  9  4  3  7  
+7  8  9  1  4  3  2  5  6  
+3  1  2  4  7  5  6  9  8  
+4  6  5  9  3  8  7  1  2  
+8  9  7  6  1  2  3  4  5  
+5  2  1  3  9  6  8  7  4  
+6  4  8  7  5  1  9  2  3  
+9  7  3  8  2  4  5  6  1  
+
+2018-05-28 20:48:49 DEBUG SudokuBoardTest:138 - Exception is NOT YET caught
+2018-05-28 20:48:49 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:48:49 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  2  0  
+0  0  5  0  0  0  0  0  0  
+0  5  0  0  0  0  0  0  0  
+0  0  0  0  0  5  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:48:49 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:48:49 INFO  BacktrackingSudokuSolver:149 - 
+8  1  2  3  4  6  5  7  9  
+3  4  6  5  7  9  1  8  2  
+5  7  9  1  2  8  3  4  6  
+1  2  3  4  5  7  6  9  8  
+4  6  8  9  1  3  7  2  5  
+7  9  5  6  8  2  4  1  3  
+2  5  1  8  3  4  9  6  7  
+6  8  4  7  9  5  2  3  1  
+9  3  7  2  6  1  8  5  4  
+
+2018-05-28 20:48:49 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:48:49 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  5  0  0  2  0  0  
+0  0  0  0  7  0  0  0  0  
+0  2  0  0  0  0  0  3  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:48:49 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:48:49 INFO  BacktrackingSudokuSolver:149 - 
+2  1  3  4  5  6  7  8  9  
+4  5  6  7  8  9  1  2  3  
+7  8  9  1  2  3  4  5  6  
+1  3  2  6  4  8  5  9  7  
+6  9  7  5  3  1  2  4  8  
+5  4  8  9  7  2  3  6  1  
+9  2  4  8  1  7  6  3  5  
+3  6  1  2  9  5  8  7  4  
+8  7  5  3  6  4  9  1  2  
+
+2018-05-28 20:48:49 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:48:49 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  6  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  2  0  
+0  0  0  8  0  0  0  0  0  
+0  0  0  0  7  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:48:49 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:48:49 INFO  BacktrackingSudokuSolver:149 - 
+4  1  2  3  5  6  7  8  9  
+3  5  7  1  8  9  6  4  2  
+6  8  9  2  4  7  1  3  5  
+1  3  4  6  9  5  8  2  7  
+2  7  5  8  1  3  4  9  6  
+8  9  6  4  7  2  3  5  1  
+5  2  1  7  3  4  9  6  8  
+7  6  3  9  2  8  5  1  4  
+9  4  8  5  6  1  2  7  3  
+
+2018-05-28 20:53:19 DEBUG SudokuBoardTest:138 - Exception is NOT YET caught
+2018-05-28 20:53:29 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:53:29 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+4  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  5  4  0  0  
+0  0  0  0  0  0  0  0  0  
+0  6  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:53:29 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:53:29 INFO  BacktrackingSudokuSolver:149 - 
+8  1  2  3  4  6  5  7  9  
+3  4  5  1  7  9  2  6  8  
+6  7  9  2  5  8  1  3  4  
+4  2  1  6  3  7  8  9  5  
+5  3  8  4  9  1  6  2  7  
+7  9  6  8  2  5  4  1  3  
+1  5  3  7  6  4  9  8  2  
+2  6  4  9  8  3  7  5  1  
+9  8  7  5  1  2  3  4  6  
+
+2018-05-28 20:53:29 DEBUG SudokuBoardTest:138 - Exception is NOT YET caught
+2018-05-28 20:53:29 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:53:29 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  2  0  0  0  0  0  
+0  0  0  0  8  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  1  0  3  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  5  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:53:29 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:53:29 INFO  BacktrackingSudokuSolver:149 - 
+5  3  1  2  4  6  7  8  9  
+2  4  6  7  8  9  1  3  5  
+7  8  9  1  3  5  2  4  6  
+4  1  2  3  6  7  5  9  8  
+3  5  7  4  9  8  6  1  2  
+6  9  8  5  1  2  3  7  4  
+1  2  3  8  5  4  9  6  7  
+8  6  5  9  7  1  4  2  3  
+9  7  4  6  2  3  8  5  1  
+
+2018-05-28 20:53:29 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:53:29 INFO  BacktrackingSudokuSolver:149 - 
+2  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  3  0  0  0  0  
+0  0  0  6  0  1  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  3  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:53:29 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:53:29 INFO  BacktrackingSudokuSolver:149 - 
+2  1  3  4  5  6  7  8  9  
+4  5  6  7  8  9  1  2  3  
+7  8  9  1  3  2  4  5  6  
+3  2  4  6  7  1  5  9  8  
+1  6  5  2  9  8  3  4  7  
+8  9  7  3  4  5  2  6  1  
+5  3  1  8  6  4  9  7  2  
+9  7  8  5  2  3  6  1  4  
+6  4  2  9  1  7  8  3  5  
+
+2018-05-28 20:53:29 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:53:29 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  3  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+8  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+5  0  0  0  0  0  0  0  0  
+0  0  0  6  0  0  0  0  0  
+0  0  1  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:53:29 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:53:29 INFO  BacktrackingSudokuSolver:149 - 
+1  2  4  5  6  7  8  3  9  
+3  5  6  1  8  9  2  4  7  
+7  8  9  2  3  4  1  5  6  
+8  1  2  3  4  6  7  9  5  
+4  6  7  8  9  5  3  1  2  
+5  9  3  7  1  2  4  6  8  
+2  3  5  6  7  1  9  8  4  
+6  4  1  9  2  8  5  7  3  
+9  7  8  4  5  3  6  2  1  
+
+2018-05-28 20:54:47 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:54:47 INFO  BacktrackingSudokuSolver:149 - 
+0  6  0  0  0  0  0  0  0  
+0  0  0  0  8  0  7  0  0  
+0  7  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  3  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:54:47 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:54:47 INFO  BacktrackingSudokuSolver:149 - 
+8  6  1  2  4  7  3  5  9  
+2  3  4  5  8  9  7  1  6  
+5  7  9  1  6  3  2  4  8  
+1  2  3  4  5  6  8  9  7  
+4  5  7  9  3  8  1  6  2  
+6  9  8  7  1  2  4  3  5  
+3  1  2  6  7  5  9  8  4  
+7  4  5  8  9  1  6  2  3  
+9  8  6  3  2  4  5  7  1  
+
+2018-05-28 20:54:47 DEBUG SudokuBoardTest:138 - Exception is NOT YET caught
+2018-05-28 20:55:44 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:55:44 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  1  0  0  0  0  0  0  0  
+0  4  0  0  0  3  0  0  0  
+0  0  0  0  0  2  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  5  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:55:44 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:55:44 INFO  BacktrackingSudokuSolver:149 - 
+8  2  1  3  4  5  6  7  9  
+3  5  4  6  7  9  1  2  8  
+6  7  9  1  2  8  3  4  5  
+2  1  3  4  8  6  5  9  7  
+5  4  6  7  9  3  2  8  1  
+7  9  8  5  1  2  4  3  6  
+1  3  2  8  6  7  9  5  4  
+9  6  7  2  5  4  8  1  3  
+4  8  5  9  3  1  7  6  2  
+
+2018-05-28 20:55:44 DEBUG SudokuBoardTest:138 - Exception is NOT YET caught
+2018-05-28 20:55:44 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:55:44 INFO  BacktrackingSudokuSolver:149 - 
+0  6  0  0  0  0  0  0  0  
+0  0  2  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  8  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  6  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:55:44 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:55:44 INFO  BacktrackingSudokuSolver:149 - 
+3  6  1  2  4  5  7  8  9  
+4  5  2  7  8  9  1  3  6  
+7  8  9  1  6  3  2  4  5  
+1  2  3  8  5  4  6  9  7  
+5  4  6  9  1  7  3  2  8  
+8  9  7  3  2  6  4  5  1  
+2  1  4  5  7  8  9  6  3  
+6  3  5  4  9  1  8  7  2  
+9  7  8  6  3  2  5  1  4  
+
+2018-05-28 20:55:44 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:55:44 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  6  0  0  0  0  
+0  0  0  0  0  0  0  4  0  
+0  0  0  0  0  0  0  0  0  
+0  1  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  2  0  8  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:55:44 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:55:44 INFO  BacktrackingSudokuSolver:149 - 
+3  2  1  4  5  7  6  8  9  
+4  5  7  8  6  9  1  2  3  
+6  8  9  1  2  3  5  4  7  
+2  3  4  5  1  6  7  9  8  
+5  1  8  7  9  2  3  6  4  
+7  9  6  3  4  8  2  1  5  
+1  6  3  9  7  4  8  5  2  
+9  7  2  6  8  5  4  3  1  
+8  4  5  2  3  1  9  7  6  
+
+2018-05-28 20:55:44 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:55:44 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  7  0  0  0  
+0  0  0  7  0  0  0  2  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  7  0  0  0  0  
+0  0  0  0  0  0  8  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:55:44 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:55:44 INFO  BacktrackingSudokuSolver:149 - 
+6  1  2  3  4  5  7  8  9  
+3  4  7  1  8  9  2  5  6  
+5  8  9  2  6  7  1  3  4  
+1  3  4  7  5  6  9  2  8  
+2  5  6  8  9  1  3  4  7  
+7  9  8  4  2  3  5  6  1  
+4  2  1  5  7  8  6  9  3  
+9  7  5  6  3  4  8  1  2  
+8  6  3  9  1  2  4  7  5  
+
+2018-05-28 20:55:57 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:55:57 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  6  2  0  
+3  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  1  4  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:55:57 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:55:57 INFO  BacktrackingSudokuSolver:149 - 
+7  1  2  3  5  6  4  8  9  
+4  3  6  2  8  9  1  5  7  
+5  8  9  4  1  7  6  2  3  
+3  2  1  5  6  4  7  9  8  
+6  4  7  8  9  2  3  1  5  
+8  9  5  7  3  1  2  4  6  
+9  6  3  1  4  5  8  7  2  
+1  7  8  9  2  3  5  6  4  
+2  5  4  6  7  8  9  3  1  
+
+2018-05-28 20:55:57 DEBUG SudokuBoardTest:138 - Exception is NOT YET caught
+2018-05-28 20:55:57 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:55:57 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  1  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  3  4  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  1  0  
+0  0  0  0  2  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:55:57 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:55:57 INFO  BacktrackingSudokuSolver:149 - 
+8  2  4  1  3  5  6  7  9  
+1  3  5  6  7  9  2  4  8  
+6  7  9  2  4  8  1  3  5  
+2  1  6  3  5  7  8  9  4  
+5  8  3  4  9  1  7  2  6  
+4  9  7  8  6  2  3  5  1  
+3  4  2  5  8  6  9  1  7  
+7  6  1  9  2  4  5  8  3  
+9  5  8  7  1  3  4  6  2  
+
+2018-05-28 20:55:57 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:55:57 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  8  0  0  
+0  0  0  0  8  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  4  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  6  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:55:57 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:55:57 INFO  BacktrackingSudokuSolver:149 - 
+1  2  3  4  5  7  8  6  9  
+4  5  6  1  8  9  2  3  7  
+7  8  9  2  6  3  1  4  5  
+2  1  4  3  7  5  6  9  8  
+3  6  5  9  4  8  7  1  2  
+8  9  7  6  1  2  3  5  4  
+5  3  2  7  9  6  4  8  1  
+6  4  8  5  2  1  9  7  3  
+9  7  1  8  3  4  5  2  6  
+
+2018-05-28 20:55:57 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:55:57 INFO  BacktrackingSudokuSolver:149 - 
+3  0  0  0  0  0  0  0  0  
+0  2  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  2  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  1  0  0  8  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:55:57 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:55:57 INFO  BacktrackingSudokuSolver:149 - 
+3  4  1  2  5  6  7  8  9  
+5  2  6  7  9  8  1  3  4  
+7  8  9  1  3  4  2  5  6  
+1  3  2  4  6  5  8  9  7  
+4  5  7  8  1  9  3  6  2  
+6  9  8  3  2  7  4  1  5  
+9  1  4  5  8  2  6  7  3  
+2  6  3  9  7  1  5  4  8  
+8  7  5  6  4  3  9  2  1  
+
+2018-05-28 20:56:08 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:56:08 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  4  0  0  0  
+0  0  0  7  0  0  0  0  0  
+0  0  0  0  6  0  0  0  0  
+0  0  0  6  0  0  0  0  0  
+0  0  0  1  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:56:08 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:56:08 INFO  BacktrackingSudokuSolver:149 - 
+6  1  2  3  5  4  7  8  9  
+3  4  5  7  8  9  1  2  6  
+7  8  9  2  6  1  3  4  5  
+1  2  3  6  4  5  8  9  7  
+4  5  8  1  9  7  2  6  3  
+9  6  7  8  2  3  4  5  1  
+2  3  4  5  1  6  9  7  8  
+5  9  1  4  7  8  6  3  2  
+8  7  6  9  3  2  5  1  4  
+
+2018-05-28 20:56:08 DEBUG SudokuBoardTest:138 - Exception is NOT YET caught
+2018-05-28 20:58:06 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:58:06 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  8  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  1  0  0  0  0  0  0  
+0  8  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:58:06 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:58:06 INFO  BacktrackingSudokuSolver:149 - 
+1  2  3  4  5  6  7  8  9  
+4  5  6  7  8  9  1  2  3  
+7  9  8  1  2  3  4  5  6  
+2  3  4  5  1  7  6  9  8  
+5  6  9  3  4  8  2  1  7  
+8  7  1  6  9  2  3  4  5  
+3  8  2  9  6  1  5  7  4  
+6  1  5  8  7  4  9  3  2  
+9  4  7  2  3  5  8  6  1  
+
+2018-05-28 20:58:06 DEBUG SudokuBoardTest:138 - Exception is NOT YET caught
+2018-05-28 20:58:43 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:58:43 INFO  BacktrackingSudokuSolver:149 - 
+0  3  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  5  0  0  0  0  0  0  0  
+1  0  0  0  0  0  2  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:58:43 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:58:43 INFO  BacktrackingSudokuSolver:149 - 
+8  3  1  2  4  5  6  7  9  
+2  4  5  6  7  9  1  3  8  
+6  7  9  1  3  8  4  2  5  
+3  1  2  4  5  6  8  9  7  
+4  6  7  8  9  3  5  1  2  
+5  9  8  7  1  2  3  4  6  
+7  5  6  3  2  1  9  8  4  
+1  8  4  9  6  7  2  5  3  
+9  2  3  5  8  4  7  6  1  
+
+2018-05-28 20:58:43 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:58:43 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  1  0  0  
+2  6  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  8  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:58:43 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:58:43 INFO  BacktrackingSudokuSolver:149 - 
+3  4  5  2  6  7  1  8  9  
+2  6  1  3  8  9  4  5  7  
+7  8  9  1  4  5  2  3  6  
+1  2  3  4  5  6  7  9  8  
+4  5  7  8  9  1  3  6  2  
+6  9  8  7  2  3  5  1  4  
+5  1  6  9  7  2  8  4  3  
+8  3  2  6  1  4  9  7  5  
+9  7  4  5  3  8  6  2  1  
+
+2018-05-28 20:58:43 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 20:58:43 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  1  0  
+0  0  0  0  0  0  0  6  0  
+0  0  0  0  0  0  7  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  5  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 20:58:43 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 20:58:43 INFO  BacktrackingSudokuSolver:149 - 
+6  2  3  4  5  7  8  1  9  
+1  4  7  2  8  9  3  6  5  
+5  8  9  1  3  6  7  2  4  
+2  1  4  3  6  5  9  7  8  
+3  7  5  8  9  1  2  4  6  
+8  9  6  7  2  4  1  5  3  
+4  3  1  5  7  8  6  9  2  
+7  6  2  9  4  3  5  8  1  
+9  5  8  6  1  2  4  3  7  
+
+2018-05-28 21:01:18 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 21:01:18 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  5  0  0  
+0  0  0  0  0  0  4  0  0  
+0  0  0  2  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  8  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 21:01:18 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 21:01:18 INFO  BacktrackingSudokuSolver:149 - 
+8  1  2  3  4  6  5  7  9  
+3  5  6  1  7  9  4  2  8  
+4  7  9  2  5  8  1  3  6  
+1  2  3  4  6  5  8  9  7  
+5  4  7  9  8  2  3  6  1  
+6  9  8  7  1  3  2  4  5  
+2  3  1  5  9  7  6  8  4  
+7  6  4  8  2  1  9  5  3  
+9  8  5  6  3  4  7  1  2  
+
+2018-05-28 21:01:18 DEBUG SudokuBoardTest:138 - Exception is NOT YET caught
+2018-05-28 21:01:24 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 21:01:24 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  6  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  1  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  8  0  0  0  0  0  
+0  0  0  5  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 21:01:24 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 21:01:24 INFO  BacktrackingSudokuSolver:149 - 
+4  1  2  3  5  7  8  6  9  
+3  5  6  1  8  9  2  4  7  
+7  8  9  2  4  6  3  1  5  
+2  3  4  6  7  5  1  9  8  
+1  6  8  4  9  2  5  7  3  
+5  9  7  8  1  3  4  2  6  
+6  7  1  5  2  8  9  3  4  
+8  2  3  9  6  4  7  5  1  
+9  4  5  7  3  1  6  8  2  
+
+2018-05-28 21:01:24 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 21:01:24 INFO  BacktrackingSudokuSolver:149 - 
+0  0  8  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  6  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  2  0  0  0  0  0  0  
+0  0  0  2  0  4  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 21:01:24 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 21:01:24 INFO  BacktrackingSudokuSolver:149 - 
+5  1  8  3  2  6  4  7  9  
+2  3  4  1  7  9  5  6  8  
+6  7  9  4  5  8  1  2  3  
+1  2  3  5  4  7  8  9  6  
+4  8  5  9  6  2  3  1  7  
+7  9  6  8  1  3  2  4  5  
+3  5  2  6  9  1  7  8  4  
+8  6  7  2  3  4  9  5  1  
+9  4  1  7  8  5  6  3  2  
+
+2018-05-28 21:01:24 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 21:01:24 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  8  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  1  0  0  0  0  6  0  
+0  0  0  0  0  0  0  0  0  
+4  0  0  0  0  0  0  0  0  
+0  0  0  0  0  8  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 21:01:24 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 21:01:24 INFO  BacktrackingSudokuSolver:149 - 
+2  1  3  4  5  6  7  8  9  
+5  4  6  7  8  9  1  2  3  
+7  8  9  1  2  3  4  5  6  
+3  2  4  5  6  1  8  9  7  
+8  5  1  2  9  7  3  6  4  
+6  9  7  8  3  4  2  1  5  
+4  3  2  6  1  5  9  7  8  
+1  7  5  9  4  8  6  3  2  
+9  6  8  3  7  2  5  4  1  
+
+2018-05-28 21:16:52 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 21:16:52 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  3  0  0  0  0  0  
+3  8  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  6  0  0  0  1  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 21:16:52 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 21:16:52 INFO  BacktrackingSudokuSolver:149 - 
+4  1  2  5  6  7  3  8  9  
+5  3  6  1  8  9  2  4  7  
+7  9  8  3  2  4  1  5  6  
+3  8  1  2  4  6  7  9  5  
+2  4  5  7  9  3  6  1  8  
+6  7  9  8  1  5  4  2  3  
+1  2  3  6  5  8  9  7  4  
+8  6  4  9  7  1  5  3  2  
+9  5  7  4  3  2  8  6  1  
+
+2018-05-28 21:17:06 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 21:17:06 INFO  BacktrackingSudokuSolver:149 - 
+1  0  0  0  0  0  0  3  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  2  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  5  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 21:17:06 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 21:17:06 INFO  BacktrackingSudokuSolver:149 - 
+1  4  2  5  6  7  8  3  9  
+3  5  6  1  8  9  2  4  7  
+7  8  9  2  3  4  1  5  6  
+4  1  3  6  2  5  7  9  8  
+5  2  7  3  9  8  4  6  1  
+6  9  8  4  7  1  3  2  5  
+2  3  5  7  1  6  9  8  4  
+8  6  1  9  4  2  5  7  3  
+9  7  4  8  5  3  6  1  2  
+
+2018-05-28 21:18:54 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 21:18:54 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  8  0  0  0  0  0  
+0  0  0  0  2  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  4  0  0  7  0  0  0  
+0  0  1  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 21:18:54 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 21:18:54 INFO  BacktrackingSudokuSolver:149 - 
+7  1  2  8  3  4  5  6  9  
+3  4  5  6  2  9  1  7  8  
+6  8  9  1  7  5  2  3  4  
+1  2  3  4  5  6  8  9  7  
+5  6  7  2  9  8  3  4  1  
+8  9  4  3  1  7  6  2  5  
+2  5  1  7  4  3  9  8  6  
+4  3  6  9  8  1  7  5  2  
+9  7  8  5  6  2  4  1  3  
+
+2018-05-28 21:19:11 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 21:19:11 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  7  0  4  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  8  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+2  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 21:19:11 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 21:19:11 INFO  BacktrackingSudokuSolver:149 - 
+8  1  2  3  5  6  4  7  9  
+3  4  5  1  7  9  2  6  8  
+6  7  9  4  2  8  1  3  5  
+1  2  3  5  4  7  8  9  6  
+4  5  6  9  8  1  3  2  7  
+7  9  8  2  6  3  5  1  4  
+5  3  1  6  9  4  7  8  2  
+2  6  7  8  1  5  9  4  3  
+9  8  4  7  3  2  6  5  1  
+
+2018-05-28 21:25:25 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 21:25:25 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+1  0  0  8  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  8  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 21:25:25 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 21:25:25 INFO  BacktrackingSudokuSolver:149 - 
+2  3  4  1  5  6  7  8  9  
+1  5  6  8  7  9  2  3  4  
+7  8  9  2  3  4  1  5  6  
+3  1  2  4  6  5  9  7  8  
+4  6  5  7  9  8  3  1  2  
+8  9  7  3  1  2  4  6  5  
+5  2  1  9  8  3  6  4  7  
+6  4  3  5  2  7  8  9  1  
+9  7  8  6  4  1  5  2  3  
+
+2018-05-28 21:29:07 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 21:29:07 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  7  0  0  
+0  0  0  0  0  0  6  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  3  0  8  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  6  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 21:29:07 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 21:29:07 INFO  BacktrackingSudokuSolver:149 - 
+8  1  2  3  4  6  7  5  9  
+3  4  5  1  7  9  6  2  8  
+6  7  9  2  5  8  1  3  4  
+1  2  4  5  3  7  8  9  6  
+5  9  3  6  8  1  2  4  7  
+7  8  6  4  9  2  3  1  5  
+2  6  7  9  1  4  5  8  3  
+4  3  1  8  6  5  9  7  2  
+9  5  8  7  2  3  4  6  1  
+
+2018-05-28 21:29:16 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 21:29:16 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  5  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  8  0  0  
+0  2  0  0  0  4  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 21:29:16 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 21:29:16 INFO  BacktrackingSudokuSolver:149 - 
+5  1  2  3  4  6  7  8  9  
+3  4  6  7  8  9  1  2  5  
+7  8  9  1  2  5  3  4  6  
+1  3  4  2  5  7  6  9  8  
+2  6  7  4  9  8  5  1  3  
+8  9  5  6  1  3  2  7  4  
+4  5  1  9  3  2  8  6  7  
+6  2  3  8  7  4  9  5  1  
+9  7  8  5  6  1  4  3  2  
+
+2018-05-28 21:29:16 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 21:29:16 INFO  BacktrackingSudokuSolver:149 - 
+0  4  0  0  0  0  2  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  4  0  0  1  0  
+0  0  6  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 21:29:16 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 21:29:16 INFO  BacktrackingSudokuSolver:149 - 
+8  4  1  3  5  6  2  7  9  
+2  3  5  1  7  9  4  6  8  
+6  7  9  2  8  4  1  3  5  
+1  2  3  5  6  7  8  9  4  
+5  8  7  9  4  2  3  1  6  
+4  9  6  8  1  3  5  2  7  
+3  1  4  6  9  5  7  8  2  
+7  6  2  4  3  8  9  5  1  
+9  5  8  7  2  1  6  4  3  
+
+2018-05-28 21:29:16 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 21:29:16 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  5  0  0  2  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  7  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  4  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  4  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 21:29:16 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 21:29:16 INFO  BacktrackingSudokuSolver:149 - 
+4  1  3  6  5  8  7  2  9  
+2  5  7  1  3  9  4  6  8  
+6  8  9  2  7  4  1  3  5  
+1  2  4  3  6  5  8  9  7  
+3  6  8  7  9  1  5  4  2  
+7  9  5  8  4  2  3  1  6  
+5  3  2  4  8  6  9  7  1  
+8  4  1  9  2  7  6  5  3  
+9  7  6  5  1  3  2  8  4  
+
+2018-05-28 21:29:16 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 21:29:16 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  5  0  
+0  0  0  0  0  0  0  0  0  
+3  6  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  6  0  0  0  0  
+0  0  0  0  0  0  4  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 21:29:16 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 21:29:16 INFO  BacktrackingSudokuSolver:149 - 
+6  1  2  3  4  5  7  8  9  
+4  3  7  1  8  9  2  5  6  
+5  8  9  2  7  6  1  3  4  
+3  6  1  4  2  7  5  9  8  
+2  4  5  8  9  3  6  1  7  
+7  9  8  5  6  1  3  4  2  
+1  2  6  9  3  8  4  7  5  
+8  5  4  7  1  2  9  6  3  
+9  7  3  6  5  4  8  2  1  
+
+2018-05-28 21:32:08 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 21:32:08 INFO  BacktrackingSudokuSolver:149 - 
+0  0  7  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+8  0  0  0  0  2  0  0  0  
+0  0  0  0  1  0  0  2  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 21:32:08 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 21:32:08 INFO  BacktrackingSudokuSolver:149 - 
+4  1  7  2  3  5  6  8  9  
+2  3  5  6  8  9  1  4  7  
+6  8  9  1  4  7  2  3  5  
+8  4  1  3  5  2  7  9  6  
+3  7  6  9  1  4  5  2  8  
+5  9  2  7  6  8  3  1  4  
+1  2  4  5  9  6  8  7  3  
+7  5  8  4  2  3  9  6  1  
+9  6  3  8  7  1  4  5  2  
+
+2018-05-28 21:32:08 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 21:32:08 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  5  0  0  3  0  0  
+0  8  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  6  0  0  0  8  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 21:32:08 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 21:32:08 INFO  BacktrackingSudokuSolver:149 - 
+6  1  2  3  4  5  7  9  8  
+3  4  5  7  8  9  1  2  6  
+7  9  8  1  2  6  4  3  5  
+1  2  4  5  6  8  3  7  9  
+5  8  3  2  9  7  6  1  4  
+9  6  7  4  1  3  8  5  2  
+2  3  1  6  5  4  9  8  7  
+4  5  9  8  7  1  2  6  3  
+8  7  6  9  3  2  5  4  1  
+
+2018-05-28 21:32:08 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 21:32:08 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  6  1  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  5  0  0  0  0  0  1  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  6  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 21:32:08 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 21:32:08 INFO  BacktrackingSudokuSolver:149 - 
+2  3  4  5  7  6  1  8  9  
+1  6  5  2  8  9  3  4  7  
+7  8  9  1  3  4  2  5  6  
+3  1  2  4  5  7  6  9  8  
+4  5  6  3  9  8  7  1  2  
+8  9  7  6  1  2  4  3  5  
+5  2  1  8  6  3  9  7  4  
+9  4  3  7  2  5  8  6  1  
+6  7  8  9  4  1  5  2  3  
+
+2018-05-28 21:32:08 INFO  BacktrackingSudokuSolver:31 - 
+Initial board game:
+2018-05-28 21:32:08 INFO  BacktrackingSudokuSolver:149 - 
+0  0  0  0  0  7  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  6  0  0  
+0  0  0  0  0  0  5  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+0  0  0  0  2  0  0  0  0  
+0  0  0  0  0  0  0  0  0  
+
+2018-05-28 21:32:08 INFO  BacktrackingSudokuSolver:33 - 
+-------------------------
+2018-05-28 21:32:08 INFO  BacktrackingSudokuSolver:149 - 
+3  1  2  4  6  7  8  5  9  
+4  5  6  1  8  9  2  3  7  
+7  8  9  2  3  5  6  1  4  
+1  2  3  6  7  4  5  9  8  
+5  4  7  3  9  8  1  2  6  
+6  9  8  5  1  2  4  7  3  
+2  3  1  7  4  6  9  8  5  
+8  6  5  9  2  3  7  4  1  
+9  7  4  8  5  1  3  6  2  
+

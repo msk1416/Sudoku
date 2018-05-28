@@ -10,6 +10,7 @@ import org.apache.log4j.Logger;
 
 import com.cp.dao.SudokuBoardDaoFactory;
 import com.cp.elems.SudokuBoard;
+import com.cp.exception.CPFileException;
 
 import application.play.Game;
 import application.play.GameController;
@@ -31,7 +32,7 @@ import javafx.stage.StageStyle;
 
 public class MainController implements Initializable {
 	
-	final static Logger logger = Logger.getLogger(MainController.class);
+    final static Logger logger = Logger.getLogger(MainController.class);
 	
 	
     @FXML
@@ -114,8 +115,8 @@ public class MainController implements Initializable {
         lblOr.setText(Main.labels.getString("main.or"));
         lblCompleted.setText(Main.labels.getString("err.completed.game"));
     }
-    
-    private Locale getCurrentLocale() {
+
+    public Locale getCurrentLocale() {
         if (langBox.getValue() != null) {
             if (langBox.getValue().toString().contains("English"))
                 return Locale.ENGLISH;
@@ -153,9 +154,15 @@ public class MainController implements Initializable {
         configureFileChooser(fileChooser);
         File file = fileChooser.showOpenDialog(langBox.getScene().getWindow());
         if (file != null) {
-            SudokuBoard loadedBoard = SudokuBoardDaoFactory.getFileDao(file.getAbsolutePath()).read();
-            if (!loadedBoard.isResolved())loadGame(loadedBoard);
-            else lblCompleted.setVisible(true);
+            SudokuBoard loadedBoard = null;
+			try {
+				loadedBoard = SudokuBoardDaoFactory.getFileDao(file.getAbsolutePath()).read();
+	            if (!loadedBoard.isResolved())loadGame(loadedBoard);
+	            else lblCompleted.setVisible(true);
+			} catch (CPFileException e) {
+				logger.error(e.getLocalizedMessage());
+				return;
+			}
         } else {
             logger.debug("null file");
         }
@@ -183,7 +190,7 @@ public class MainController implements Initializable {
                    Main.labels.getString("info.uni.studies") + ": " + info.getString("Studies") + "\n" +
                    Main.labels.getString("info.uni.home") + ": " + info.getString("HomeUni") + "\n" +
                    Main.labels.getString("info.uni.guest") + ": " + info.getString("GuestUni") + "\n" +
-                   Main.labels.getString("info.uni.course") + ": " + info.getString("Studies");
+                   Main.labels.getString("info.uni.course") + ": " + info.getString("Course");
                    ;
         alert.setContentText(msg);
         alert.showAndWait();

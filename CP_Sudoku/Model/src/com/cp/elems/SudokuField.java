@@ -9,6 +9,7 @@ import java.io.Serializable;
 
 import org.apache.log4j.Logger;
 
+import com.cp.exception.CPValueOutOfBoundsException;
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 
@@ -26,23 +27,21 @@ public class SudokuField implements Serializable, Cloneable, Comparable<SudokuFi
         this.value = 0;
     }
     
-    public SudokuField(int value) {
-        if (value >= 0 && value <= 9) {
-            this.value = value;
-        } else {
-            this.value = 0;
-        }
+    public SudokuField(int value) throws CPValueOutOfBoundsException {
+        setFieldValue(value);
     }
 
     public int getFieldValue() {
         return value;
     }
 
-    public void setFieldValue(int value) {
+    public void setFieldValue(int value) throws CPValueOutOfBoundsException {
         if (value >= 0 && value <= 9) {
             this.value = value;
         } else {
             this.value = 0;
+            CPValueOutOfBoundsException ex = new CPValueOutOfBoundsException(CPValueOutOfBoundsException.VALUE_OUT_OF_BOUNDS);
+            throw ex;
         }
     }
     

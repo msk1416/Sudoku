@@ -1,18 +1,31 @@
 package com.cp.test;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import org.apache.log4j.Logger;
 import org.junit.jupiter.api.Test;
 import com.cp.elems.SudokuBoard;
+import com.cp.exception.CPBoardException;
+import com.cp.exception.CPNotResolvableException;
+import com.cp.exception.CPValueOutOfBoundsException;
 import com.cp.solver.BacktrackingSudokuSolver;
+
+import application.MainController;
 
 class SudokuSolverTest {
     private final int N = 9;
-
+    final static Logger logger = Logger.getLogger(SudokuSolverTest.class);
     
     @Test
     public void testCorrectness() {
         BacktrackingSudokuSolver testSolver = new BacktrackingSudokuSolver();
-        SudokuBoard testBoard = testSolver.fillBoard();
+        SudokuBoard testBoard = null;
+        try {
+            testBoard = testSolver.fillBoard();
+        } catch (CPBoardException | CPNotResolvableException e) {
+            logger.error(e.getLocalizedMessage());
+            logger.error(e.getStackTrace());
+        }
         //check rows and columns
         for (int i=0; i<N; i++) {
             //ith row
@@ -32,9 +45,16 @@ class SudokuSolverTest {
     @Test
     public void testNoRepeatedSolutions() {
         BacktrackingSudokuSolver testSolver = new BacktrackingSudokuSolver();
-        SudokuBoard boardTest1 = testSolver.fillBoard();
-        SudokuBoard boardTest2 = testSolver.fillBoard();
-        assertFalse(equalBoards(boardTest1, boardTest2));
+        SudokuBoard boardTest1;
+        try {
+            boardTest1 = testSolver.fillBoard();
+            SudokuBoard boardTest2 = testSolver.fillBoard();
+            assertFalse(equalBoards(boardTest1, boardTest2));
+        } catch (CPBoardException | CPNotResolvableException e) {
+            logger.error(e.getLocalizedMessage());
+            logger.error(e.getStackTrace());
+        }
+        
     }
 
     private boolean equalBoards(SudokuBoard a, SudokuBoard b) {

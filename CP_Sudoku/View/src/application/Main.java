@@ -42,4 +42,8 @@ public class Main extends Application {
 		launch(args);
 		
 	}
+	
+    public static Locale getLocale() {
+    	return currentLocale;
+    }
 }

@@ -11,6 +11,7 @@ import java.util.Arrays;
 
 import org.apache.log4j.Logger;
 
+import com.cp.exception.CPValueOutOfBoundsException;
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 
@@ -86,7 +87,7 @@ public class SudokuBoard implements Serializable, Cloneable {
         return val;
     }
 
-    public void set(int x, int y, int value) {
+    public void set(int x, int y, int value) throws CPValueOutOfBoundsException {
         //value 0 will be inserted by the algorithm solver when backtracking, to reset de position
         if (value >= 0 && value <= 9) { 
             board.get(x).get(y).setFieldValue(value);

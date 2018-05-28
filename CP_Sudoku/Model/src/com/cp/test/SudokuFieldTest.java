@@ -5,37 +5,47 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import com.cp.elems.SudokuField;
+import com.cp.exception.CPValueOutOfBoundsException;
 
 class SudokuFieldTest {
 
     @Test
     void testSudokuFieldConstructorOk() {
         int testValue = 5;
-        SudokuField field = new SudokuField(testValue);
+        SudokuField field = null;
+        try {
+            field = new SudokuField(testValue);
+        } catch (CPValueOutOfBoundsException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
         assertEquals(testValue, field.getFieldValue());
     }
     
     @Test
-    void testSudokuFieldConstructorNonValid() {
+    void testSudokuFieldConstructorOutOfBounds() {
         int testValue = 15;
-        SudokuField field = new SudokuField(testValue);
-        assertNotEquals(testValue, field.getFieldValue());
+        assertThrows(CPValueOutOfBoundsException.class, () -> { SudokuField field = new SudokuField(testValue); });
     }
     
     @Test
     void testSetFieldValueOk() {
         SudokuField field = new SudokuField();
         int testValue = 5;
-        field.setFieldValue(testValue);
+        try {
+            field.setFieldValue(testValue);
+        } catch (CPValueOutOfBoundsException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
         assertEquals(testValue, field.getFieldValue());
     }
     
     @Test
-    void testSetFieldValueNonValid() {
+    void testSetFieldValueSetOutOfBounds() {
         int testValue = 15;
         SudokuField field = new SudokuField();
-        field.setFieldValue(testValue);
-        assertNotEquals(testValue, field.getFieldValue());
+        assertThrows(CPValueOutOfBoundsException.class, () -> { field.setFieldValue(testValue); });
     }
 
 }

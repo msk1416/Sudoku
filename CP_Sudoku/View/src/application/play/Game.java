@@ -3,13 +3,20 @@ package application.play;
 import java.util.ArrayList;
 import java.util.Random;
 
+import org.apache.log4j.Logger;
+
 import com.cp.Cell;
 import com.cp.elems.SudokuBoard;
+import com.cp.exception.CPBoardException;
+import com.cp.exception.CPNotResolvableException;
+import com.cp.exception.CPValueOutOfBoundsException;
 import com.cp.solver.BacktrackingSudokuSolver;
 
 import application.Main;
+import application.MainController;
 
 public class Game {
+    final static Logger logger = Logger.getLogger(Game.class);
     private String difficulty;
     
     public String getDifficulty() {
@@ -34,7 +41,12 @@ public class Game {
         this.difficulty = diff;
         gameBoard = new SudokuBoard();
         BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
-        solution = solver.fillBoard();
+        try {
+            solution = solver.fillBoard();
+        } catch (CPBoardException | CPNotResolvableException e) {
+            logger.error(e.getLocalizedMessage());
+            logger.error(e.getStackTrace());
+        }
         if (solution.isResolved()) {
             setInitialBoard();
             gameBoard.print();
@@ -46,7 +58,12 @@ public class Game {
         this.difficulty = ";;;";
         this.gameBoard = board;
         BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
-        this.solution = solver.fillBoard();
+        try {
+            this.solution = solver.fillBoard();
+        } catch (CPBoardException | CPNotResolvableException e) {
+            logger.error(e.getLocalizedMessage());
+            logger.error(e.getStackTrace());
+        }
         if (this.solution.isResolved()) {
             gameBoard.print();
         }
@@ -66,7 +83,12 @@ public class Game {
     
     public boolean setValue(int i, int j, int value) {
         if (value > 0 && value <= 9) {
-            gameBoard.set(i, j, value);
+            try {
+                gameBoard.set(i, j, value);
+            } catch (CPValueOutOfBoundsException e) {
+                logger.error(e.getLocalizedMessage());
+                logger.error(e.getStackTrace());
+            }
             return true;
         }
         return false;
@@ -90,7 +112,7 @@ public class Game {
             rr = rand.nextInt(8);
             rc = rand.nextInt(8);
             if (!randomInitialCells.contains(new Cell(rr, rc))) {
-                gameBoard.set(rr, rc, solution.get(rr, rc));
+                setValue(rr, rc, solution.get(rr, rc));
                 randomInitialCells.add(new Cell(rr, rc));
             } else {
                 i--;
@@ -103,7 +125,7 @@ public class Game {
     public void loadSolution() {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
-                gameBoard.set(i, j, solution.get(i, j));
+                setValue(i, j, solution.get(i, j));
             }
         }
         

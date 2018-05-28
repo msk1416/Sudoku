@@ -1,6 +1,7 @@
 package com.cp.inteface;
 
 import com.cp.elems.SudokuBoard;
+import com.cp.exception.CPValueOutOfBoundsException;
 /**
  * 
  * @author sergi
@@ -8,5 +9,5 @@ import com.cp.elems.SudokuBoard;
  */
 public interface SudokuSolver {
 
-    public void solve(SudokuBoard board);
+    public void solve(SudokuBoard board) throws CPValueOutOfBoundsException;
 }

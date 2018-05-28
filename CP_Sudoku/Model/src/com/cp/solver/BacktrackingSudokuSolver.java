@@ -6,6 +6,9 @@ import org.apache.log4j.Logger;
 
 import com.cp.Cell;
 import com.cp.elems.SudokuBoard;
+import com.cp.exception.CPBoardException;
+import com.cp.exception.CPNotResolvableException;
+import com.cp.exception.CPValueOutOfBoundsException;
 import com.cp.inteface.SudokuSolver;
 
 import application.MainController;
@@ -20,7 +23,7 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
     public BacktrackingSudokuSolver() {
         
     }
-    public SudokuBoard fillBoard() {
+    public SudokuBoard fillBoard() throws CPBoardException, CPNotResolvableException {
         board = new SudokuBoard();
         //no need to initialize board cells, as default value is already 0
         //only initial random cells 
@@ -28,21 +31,24 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
         logger.info("\nInitial board game:");
         printBoard();
         logger.info("\n-------------------------");
-        solve(board);
+        try {
+            solve(board);
+        } catch (CPValueOutOfBoundsException e) {
+            throw new CPBoardException(CPBoardException.FILL_BOARD_GENERAL, e);
+        }
         if (board.isResolved()) {
             printBoard();
             return board;
         } else {
-            logger.info("This sudoku board could not be solved.");
-            return null;
+            throw new CPNotResolvableException(CPNotResolvableException.NO_SOLUTION);
         }
     }
-    public void solve(final SudokuBoard board) {
+    public void solve(final SudokuBoard board) throws CPValueOutOfBoundsException {
         solveCell(new Cell(0, 0));
     }
 
 
-    private void initializeRandomCells(int nCells) {
+    private void initializeRandomCells(int nCells) throws CPValueOutOfBoundsException {
         for (int n = 0; n < nCells; n++) {
             Random rand = new Random();
             int rr, rc, rv; // rr: random row, rc: random column, rv: random value
@@ -92,7 +98,7 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
         return true;
     }
 
-    boolean solveCell(final Cell cell) {
+    boolean solveCell(final Cell cell) throws CPValueOutOfBoundsException {
         // cell will be null when we have solved the sudoku
         if (cell == null) {
             return true;
