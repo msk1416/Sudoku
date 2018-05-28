@@ -10,10 +10,7 @@ import com.cp.elems.SudokuBoard;
 import com.cp.exception.CPBoardException;
 import com.cp.exception.CPFileException;
 import com.cp.exception.CPNotResolvableException;
-import com.cp.exception.CPValueOutOfBoundsException;
 import com.cp.solver.BacktrackingSudokuSolver;
-
-import application.MainController;
 
 class DaoTest {
     final static Logger logger = Logger.getLogger(DaoTest.class);

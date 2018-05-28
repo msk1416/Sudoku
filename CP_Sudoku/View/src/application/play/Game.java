@@ -13,7 +13,6 @@ import com.cp.exception.CPValueOutOfBoundsException;
 import com.cp.solver.BacktrackingSudokuSolver;
 
 import application.Main;
-import application.MainController;
 
 public class Game {
     final static Logger logger = Logger.getLogger(Game.class);
