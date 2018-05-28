@@ -27,6 +27,30 @@
           <target>1.8</target>
         </configuration>
       </plugin>
+      <plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-resources-plugin</artifactId>
+		       <executions>
+		           <execution>
+		               <id>copy-resource-files</id>
+		               <phase>package</phase>
+		               <goals>
+		                   <goal>copy-resources</goal>
+		               </goals>
+		               <configuration>
+		                   <outputDirectory>${project.basedir}/src</outputDirectory>
+		                   <resources>
+		                       <resource>
+			                        <directory>${project.parent.basedir}/src/main/resources</directory>
+			                        <includes>
+			                        	<include>**/*.properties</include>
+			                        </includes>
+		                       </resource>
+		                   </resources>
+		               </configuration>
+		        </execution>
+		       </executions>
+    		</plugin>
     </plugins>
   </build>
 </project>
