@@ -17,6 +17,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="/CP_Sudoku"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/Model"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CP_Sudoku"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
